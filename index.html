@@ -1,28 +1,33 @@
 <!doctype html>
 <html lang="en" data-theme="dark" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light dark" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; connect-src 'self' https://cdn.tailwindcss.com https://formspree.io; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; base-uri 'none'; object-src 'none'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; connect-src 'self' https://cdn.tailwindcss.com; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content" />
   <title>NextLab Innovations | Premium Software Studio &amp; AI Products</title>
-  <meta name="description" content="NextLab Innovations - Premium AI &amp; product engineering studio. Builders of Kashandaz (cashback ecosystem), GNT Dashboard, and security-first enterprise tools." />
+  <meta name="description"
+    content="NextLab Innovations - Premium AI &amp; product engineering studio. Builders of Kashandaz (cashback ecosystem), GNT Dashboard, and security-first enterprise tools." />
   <meta property="og:title" content="NextLab Innovations | Premium Software Studio" />
-  <meta property="og:description" content="A premium product development studio building high-performance AI tools, browser dashboards, and secure mobile platforms." />
+  <meta property="og:description"
+    content="A premium product development studio building high-performance AI tools, browser dashboards, and secure mobile platforms." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://nextlabinnovations.tech/images/main_logo.png" />
-  <link rel="canonical" href="https://nextlabinnovations.tech/" />
-  <link rel="shortcut icon" href="favicon/favicon.ico?v=2" type="image/x-icon" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png?v=2" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png?v=2" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png?v=2" />
-  <link rel="manifest" href="site.webmanifest?v=2" />
+  <meta property="og:image" content="../Images/main%20logo.png" />
+  <link rel="icon" href="images/main_logo.png" type="image/png" />
+
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
 
   <script src="js/theme-init.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -78,7 +83,8 @@
 
   <style>
     :root {
-      --bg: #020617; /* Deep Navy Base */
+      --bg: #020617;
+      /* Deep Navy Base */
       --fg: #EAF0FF;
       --muted: rgba(234, 240, 255, 0.72);
       --glass-top: rgba(15, 23, 42, 0.55);
@@ -101,16 +107,22 @@
       border: 1px solid var(--glass-border);
       position: relative;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
     }
 
+
+
     /* Section backgrounds — static only, no animation */
-    section, header, footer {
+    section,
+    header,
+    footer {
       background-size: 100% 100%;
     }
 
     #products {
-      background: 
+      background:
         radial-gradient(circle at 10% 15%, rgba(124, 58, 237, 0.12), transparent 45%),
         radial-gradient(circle at 90% 25%, rgba(236, 72, 153, 0.10), transparent 40%),
         radial-gradient(circle at 50% 85%, rgba(37, 99, 235, 0.10), transparent 45%),
@@ -118,7 +130,7 @@
     }
 
     #roadmap {
-      background: 
+      background:
         radial-gradient(circle at 15% 20%, rgba(6, 182, 212, 0.10), transparent 45%),
         radial-gradient(circle at 85% 15%, rgba(124, 58, 237, 0.12), transparent 40%),
         radial-gradient(circle at 50% 80%, rgba(249, 115, 22, 0.06), transparent 45%),
@@ -126,7 +138,7 @@
     }
 
     #capabilities {
-      background: 
+      background:
         radial-gradient(circle at 20% 10%, rgba(37, 99, 235, 0.12), transparent 45%),
         radial-gradient(circle at 80% 30%, rgba(236, 72, 153, 0.08), transparent 40%),
         radial-gradient(circle at 55% 85%, rgba(249, 115, 22, 0.05), transparent 45%),
@@ -134,7 +146,7 @@
     }
 
     #stats {
-      background: 
+      background:
         radial-gradient(circle at 10% 30%, rgba(124, 58, 237, 0.12), transparent 45%),
         radial-gradient(circle at 90% 10%, rgba(6, 182, 212, 0.12), transparent 45%),
         radial-gradient(circle at 50% 85%, rgba(37, 99, 235, 0.12), transparent 45%),
@@ -142,7 +154,7 @@
     }
 
     #team {
-      background: 
+      background:
         radial-gradient(circle at 15% 15%, rgba(236, 72, 153, 0.10), transparent 45%),
         radial-gradient(circle at 85% 25%, rgba(37, 99, 235, 0.12), transparent 40%),
         radial-gradient(circle at 50% 80%, rgba(124, 58, 237, 0.10), transparent 45%),
@@ -151,129 +163,193 @@
 
     .stat-card {
       position: relative;
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease, background-color 0.4s ease;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
     }
 
-    /* === REVEAL ANIMATION SYSTEM === */
-    .reveal,
-    [data-reveal="fade-up"] {
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(37, 99, 235, 0.25);
+      box-shadow: 0 12px 32px -8px rgba(37, 99, 235, 0.15);
+    }
+
+    @keyframes float-glow-bg {
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes float-glow-bg-light {
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-      backface-visibility: hidden;
     }
-    [data-reveal="fade-left"] {
-      opacity: 0;
-      transform: translateX(-30px);
-      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-      backface-visibility: hidden;
-    }
-    [data-reveal="fade-right"] {
-      opacity: 0;
-      transform: translateX(30px);
-      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-      backface-visibility: hidden;
-    }
-    [data-reveal="fade-in"] {
-      opacity: 0;
-      transform: none;
-      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
-      backface-visibility: hidden;
-    }
-    .reveal.active,
-    [data-reveal].active {
-      opacity: 1 !important;
-      transform: translate(0, 0) !important;
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Stagger reveal animations matching main site */
-    .grid > .reveal:nth-child(1), .space-y-12 > .reveal:nth-child(1) { transition-delay: 0ms; }
-    .grid > .reveal:nth-child(2), .space-y-12 > .reveal:nth-child(2) { transition-delay: 50ms; }
-    .grid > .reveal:nth-child(3), .space-y-12 > .reveal:nth-child(3) { transition-delay: 100ms; }
-    .grid > .reveal:nth-child(4), .space-y-12 > .reveal:nth-child(4) { transition-delay: 150ms; }
-    .grid > .reveal:nth-child(5), .space-y-12 > .reveal:nth-child(5) { transition-delay: 200ms; }
-    .grid > .reveal:nth-child(6), .space-y-12 > .reveal:nth-child(6) { transition-delay: 250ms; }
+    .grid>.reveal:nth-child(1),
+    .space-y-12>.reveal:nth-child(1) {
+      transition-delay: 0ms;
+    }
+
+    .grid>.reveal:nth-child(2),
+    .space-y-12>.reveal:nth-child(2) {
+      transition-delay: 60ms;
+    }
+
+    .grid>.reveal:nth-child(3),
+    .space-y-12>.reveal:nth-child(3) {
+      transition-delay: 120ms;
+    }
+
+    .grid>.reveal:nth-child(4),
+    .space-y-12>.reveal:nth-child(4) {
+      transition-delay: 180ms;
+    }
+
+    .grid>.reveal:nth-child(5),
+    .space-y-12>.reveal:nth-child(5) {
+      transition-delay: 240ms;
+    }
+
+    .grid>.reveal:nth-child(6),
+    .space-y-12>.reveal:nth-child(6) {
+      transition-delay: 300ms;
+    }
 
     /* Hero Text Sequential Timeline */
-    .hero-badge.reveal { transition-delay: 0ms; }
-    .hero-headline.reveal { transition-delay: 80ms; }
-    .hero-desc.reveal { transition-delay: 160ms; }
-    .hero-btns.reveal { transition-delay: 240ms; }
-    .hero-trust.reveal { transition-delay: 320ms; }
+    .hero-badge.reveal {
+      transition-delay: 0ms;
+    }
+
+    .hero-headline.reveal {
+      transition-delay: 100ms;
+    }
+
+    .hero-desc.reveal {
+      transition-delay: 250ms;
+    }
+
+    .hero-btns.reveal {
+      transition-delay: 350ms;
+    }
+
+    .hero-trust.reveal {
+      transition-delay: 450ms;
+    }
 
     /* Progress Bar Entry Animations */
-    .progress-bar-1, .progress-bar-2, .progress-bar-3 {
+    .progress-bar-1,
+    .progress-bar-2,
+    .progress-bar-3 {
       transform-origin: left;
       transform: scaleX(0);
-      transition: transform 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
       will-change: transform;
     }
+
     .reveal.active .progress-bar-1,
     .reveal.active .progress-bar-2,
     .reveal.active .progress-bar-3 {
       transform: scaleX(1);
     }
 
-    /* Smooth transition presets for buttons & icons */
-    .rounded-btn, a.rounded-\[18px\], a.rounded-btn, button, a {
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    }
 
-    /* Hover states for desktop only — premium subtle */
-    @media (hover: hover) and (min-width: 1025px) {
+
+    /* Hover states for desktop only */
+    @media (hover: hover) and (min-width: 769px) {
       .glass:hover {
-        transform: translateY(-2px);
-        border-color: rgba(77, 124, 254, 0.25);
-        box-shadow: 0 12px 32px -8px rgba(3, 8, 23, 0.5);
-      }
-      [data-theme="light"] .glass:hover {
-        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-3px);
         border-color: rgba(37, 99, 235, 0.25);
-        box-shadow: 0 10px 24px -8px rgba(15, 23, 42, 0.08);
+        box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.45);
       }
+
+      [data-theme="light"] .glass:hover {
+        background: rgba(255, 255, 255, 0.85);
+        border-color: rgba(37, 99, 235, 0.3);
+        box-shadow: 0 12px 36px -8px rgba(15, 23, 42, 0.1);
+      }
+
       .hover-glow:hover {
-        transform: translateY(-2px);
+        transform: translateY(-3px);
         border-color: rgba(154, 92, 255, 0.3);
-        box-shadow: 0 12px 24px -8px rgba(154, 92, 255, 0.15);
+        box-shadow: 0 12px 36px -8px rgba(154, 92, 255, 0.15);
       }
+
       .stat-card:hover {
-        transform: translateY(-2px);
-        border-color: rgba(77, 124, 254, 0.25);
-        box-shadow: 0 10px 24px -8px rgba(77, 124, 254, 0.15);
+        transform: translateY(-4px);
+        border-color: rgba(37, 99, 235, 0.25);
+        box-shadow: 0 12px 32px -8px rgba(37, 99, 235, 0.15);
       }
+
       [data-theme="light"] .stat-card:hover {
-        background: rgba(255, 255, 255, 0.95);
-        border-color: rgba(37, 99, 235, 0.30);
-        box-shadow: 0 10px 24px -8px rgba(37, 99, 235, 0.08);
+        background: rgba(255, 255, 255, 0.85);
+        border-color: rgba(37, 99, 235, 0.3);
+        box-shadow: 0 12px 36px -8px rgba(37, 99, 235, 0.1);
       }
-      .rounded-btn:hover, a.rounded-\[18px\]:hover, a.rounded-btn:hover {
-        transform: translateY(-1px);
+
+      .rounded-btn:hover,
+      a.rounded-\[18px\]:hover,
+      a.rounded-btn:hover {
+        transform: translateY(-2px);
       }
     }
 
     /* Click triggers / Active states */
-    .rounded-btn:active, a.rounded-\[18px\]:active, a.rounded-btn:active, button:active, a:active {
-      transform: scale(0.97) !important;
-      transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+    .rounded-btn:active,
+    a.rounded-\[18px\]:active,
+    a.rounded-btn:active,
+    button:active,
+    a:active {
+      transform: scale(0.98) !important;
+      transition: transform 100ms ease !important;
     }
 
     /* Mobile specific responsiveness & animation limits */
     @media (max-width: 768px) {
-      .glass, .stat-card {
+
+      .glass,
+      .stat-card {
         backdrop-filter: blur(8px) saturate(120%);
         -webkit-backdrop-filter: blur(8px) saturate(120%);
       }
+
       .particle {
         display: none !important;
       }
-      .glass:hover, .stat-card:hover {
+
+      .glass:hover,
+      .stat-card:hover {
         transform: none !important;
         box-shadow: none !important;
       }
-      #floatingIconWrap, #floatingIcon {
+
+      #floatingIconWrap,
+      #floatingIcon {
         animation: none !important;
         transform: none !important;
       }
@@ -287,30 +363,6 @@
       --glass-top: rgba(255, 255, 255, 0.72);
       --glass-btm: rgba(255, 255, 255, 0.72);
       --glass-border: rgba(148, 163, 184, 0.20);
-    }
-
-    [data-theme="light"] #mobileMenu {
-      background-color: rgba(248, 250, 252, 0.95) !important;
-      border-color: rgba(148, 163, 184, 0.2) !important;
-    }
-
-    [data-theme="light"] #mobileMenu nav a {
-      color: #334155 !important;
-      border-color: rgba(15, 23, 42, 0.08) !important;
-    }
-
-    [data-theme="light"] #mobileMenu nav a:hover {
-      color: #2563EB !important;
-    }
-
-    [data-theme="light"] #mobileMenu nav a.rounded-btn {
-      color: #0F172A !important;
-      border-color: rgba(15, 23, 42, 0.15) !important;
-    }
-
-    [data-theme="light"] #mobileMenu nav a.rounded-btn:hover {
-      border-color: #2563EB !important;
-      color: #2563EB !important;
     }
 
     [data-theme="light"] body {
@@ -358,7 +410,7 @@
         #F8FAFC !important;
     }
 
-    [data-theme="light"] .fixed.inset-0.-z-10 > div {
+    [data-theme="light"] .fixed.inset-0.-z-10>div {
       opacity: 0.15;
     }
 
@@ -377,8 +429,8 @@
 
 
 
-    [data-theme="light"] h1, 
-    [data-theme="light"] h2, 
+    [data-theme="light"] h1,
+    [data-theme="light"] h2,
     [data-theme="light"] h3 {
       color: #0F172A;
     }
@@ -657,7 +709,8 @@
       user-select: none;
     }
 
-    button, a {
+    button,
+    a {
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       user-select: none;
@@ -698,7 +751,9 @@
         padding: 1.25rem !important;
       }
 
-      h1, h2, h3 {
+      h1,
+      h2,
+      h3 {
         word-break: break-word;
       }
 
@@ -784,28 +839,22 @@
         animation: none !important;
       }
 
-      /* Mobile: lighter animation distance for performance */
-      .reveal,
-      [data-reveal="fade-up"] {
-        transform: translateY(15px);
-        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+      .reveal {
+        transform: translateY(8px) !important;
+        transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1) !important;
       }
-      [data-reveal="fade-left"] {
-        transform: translateX(-15px);
-        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
-      }
-      [data-reveal="fade-right"] {
-        transform: translateX(15px);
-        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
-      }
-      [data-reveal="fade-in"] {
-        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1);
+
+      /* Safe Touch Targets */
+      a,
+      button {
+        padding: 0.5rem 1rem;
       }
     }
 
     @media (min-width: 641px) and (max-width: 1024px) {
-      .reveal, [data-reveal] {
-        transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      .reveal {
+        transform: translateY(12px) !important;
+        transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1), transform 500ms cubic-bezier(0.16, 1, 0.3, 1) !important;
       }
     }
 
@@ -833,31 +882,29 @@
       }
     }
 
-
-
-
-    /* GPU Acceleration — only for elements that animate */
-    .phone-slider,
-    .phone-mockup {
-      will-change: transform;
+    /* ========== PERFORMANCE OPTIMIZATIONS ========== */
+    /* Optimize animations for lower-end devices */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
-    /* Touch scrolling optimization for mobile */
+
+    /* GPU Acceleration for smooth scrolling */
+    /* NOTE: .reveal is intentionally excluded here to avoid overriding its translateY animation */
+    .glass,
+    .theme-toggle,
+    button,
+    a {
+      transform: translateZ(0);
+      will-change: auto;
+    }
+
     body {
-      touch-action: pan-y;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    body {
-      overflow-y: scroll; /* Always show scrollbar to prevent layout shift */
-    }
-
-    /* Premium focus states for keyboard accessibility */
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
-      outline: 2px solid #4D7CFE;
-      outline-offset: 4px;
+      overflow-y: scroll;
+      /* Always show scrollbar to prevent layout shift */
     }
 
     .hover-glow {
@@ -877,8 +924,16 @@
     }
 
     @keyframes cursor-blink {
-      0%, 50% { opacity: 1; }
-      50.1%, 100% { opacity: 0; }
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      50.1%,
+      100% {
+        opacity: 0;
+      }
     }
 
 
@@ -887,23 +942,24 @@
 
 
 
-    /* Consolidated reduced-motion — single block */
     @media (prefers-reduced-motion: reduce) {
-      *,
-      .reveal,
-      [data-reveal] {
+      * {
         animation: none !important;
         transition: none !important;
-        opacity: 1 !important;
-        transform: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
       }
     }
 
     @media (max-width: 768px) {
       .glass {
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(12px) saturate(130%);
+        -webkit-backdrop-filter: blur(12px) saturate(130%);
       }
+
       .hover-glow:hover {
         transform: none;
       }
@@ -913,6 +969,7 @@
     #products article.glass {
       overflow: visible !important;
     }
+
     #products article.glass .phone-slide img {
       pointer-events: none;
     }
@@ -924,7 +981,7 @@
       border-width: 4px !important;
       border-radius: 18px !important;
       border-color: #1a2233 !important;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
     }
 
     .phone-mockup--mini .phone-notch {
@@ -974,7 +1031,7 @@
       border-radius: 40px;
       background: #090d16;
       border: 10px solid #1a2233;
-      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.1), inset 0 0 12px rgba(0,0,0,0.8);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 0 12px rgba(0, 0, 0, 0.8);
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -991,8 +1048,8 @@
       top: 8px;
       left: 50%;
       transform: translateX(-50%);
-      width: 76px;
-      height: 22px;
+      width: 60px;
+      height: 18px;
       background: #000;
       border-radius: 12px;
       z-index: 100;
@@ -1023,10 +1080,9 @@
       opacity: 0;
       transform: translateX(10px);
       transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-      will-change: opacity, transform;
       pointer-events: none;
     }
-
+    
     .phone-slide.active {
       opacity: 1;
       transform: translateX(0);
@@ -1056,7 +1112,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.3);
+      background: rgba(255, 255, 255, 0.3);
       cursor: pointer;
       transition: all 0.3s var(--ease);
     }
@@ -1083,7 +1139,7 @@
       cursor: pointer;
       z-index: 101;
       transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       font-size: 18px;
     }
 
@@ -1109,9 +1165,11 @@
         font-size: 14px;
         background: rgba(15, 23, 42, 0.85);
       }
+
       .phone-arrow--left {
         left: 8px;
       }
+
       .phone-arrow--right {
         right: 8px;
       }
@@ -1122,6 +1180,7 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       transition: border-color 0.25s ease;
     }
+
     .faq-trigger {
       width: 100%;
       text-align: left;
@@ -1136,102 +1195,57 @@
       border: none;
       transition: color 0.2s ease;
     }
-    .faq-content-wrapper {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      overflow: hidden;
-    }
-    .faq-item.faq-open .faq-content-wrapper {
-      grid-template-rows: 1fr;
-    }
+
     .faq-content {
-      min-height: 0;
-      transition: visibility 0.3s ease;
-      visibility: hidden;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding-bottom 0.3s ease;
       color: rgba(255, 255, 255, 0.7);
       font-size: 0.925rem;
       line-height: 1.6;
     }
-    .faq-item.faq-open .faq-content {
-      visibility: visible;
+
+    .faq-item.active .faq-content {
+      max-height: 200px;
       padding-bottom: 1.5rem;
     }
+
     .faq-icon {
-      transition: opacity 0.25s ease;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       display: inline-block;
       font-size: 1.25rem;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
     }
 
     [data-theme="light"] .faq-trigger {
       color: #0F172A;
     }
+
     [data-theme="light"] .faq-content {
       color: #475569;
     }
+
     [data-theme="light"] .faq-item {
       border-color: rgba(15, 23, 42, 0.08);
     }
-
-    /* ===== TECH STACK CHIP STYLES ===== */
-    .tech-chip {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.775rem;
-      font-weight: 600;
-      color: rgba(234, 240, 255, 0.78);
-      letter-spacing: 0.01em;
-      padding: 5px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      transition: color 0.2s ease;
-    }
-    .tech-chip:last-child { border-bottom: none; }
-    .tech-chip:hover { color: rgba(234, 240, 255, 1); }
-    .tech-icon {
-      font-size: 0.85rem;
-      color: rgba(77, 124, 254, 0.85);
-      flex-shrink: 0;
-      width: 16px;
-      text-align: center;
-    }
-    [data-theme="light"] .tech-chip {
-      color: #334155;
-      border-color: rgba(15, 23, 42, 0.06);
-    }
-    [data-theme="light"] .tech-chip:hover { color: #0F172A; }
-    [data-theme="light"] #tech-stack {
-      background:
-        radial-gradient(ellipse at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 55%),
-        #F8FAFC !important;
-    }
-
-    /* ===== HEADER SCROLLED STATE ===== */
-    header {
-      border-bottom: 1px solid transparent;
-      background: rgba(2, 6, 23, 0.0);
-      backdrop-filter: blur(0px);
-      transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
-    }
-    header.scrolled {
-      background: rgba(2, 6, 23, 0.80);
-      border-color: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(20px) saturate(150%);
-      -webkit-backdrop-filter: blur(20px) saturate(150%);
-    }
-    [data-theme="light"] header.scrolled {
-      background: rgba(248, 250, 252, 0.88);
-      border-color: rgba(15, 23, 42, 0.07);
-    }
+    
+    /* Tech Stack Chip Styles */
+    .tech-chip { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: #a1a1aa; }
+    .tech-icon { font-size: 0.875rem; }
   </style>
 </head>
-<body id="top" class="font-sans antialiased selection:bg-neonBlue/30 selection:text-white">
 
+<body class="font-sans antialiased selection:bg-neonBlue/30 selection:text-white">
+  <!-- Removed fixed blur orbs for scroll performance -->
 
   <header class="sticky top-0 z-40">
     <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-      <a href="/" id="logoHomeLink" aria-label="NextLab Innovations — back to home" class="inline-flex items-center gap-3 transition-opacity hover:opacity-90">
-        <img src="images/main_logo.png" alt="NextLab logo" class="h-9 w-9 rounded-xl border border-white/20 object-cover" loading="eager" decoding="async" />
+      <a href="/" class="inline-flex items-center gap-3 transition-transform hover:scale-[1.02]">
+        <img src="images/main_logo.png" alt="NextLab logo"
+          class="h-9 w-9 rounded-xl border border-white/20 object-cover" loading="lazy" decoding="async" />
         <span class="font-display text-sm font-semibold tracking-[0.08em] text-white/85">NEXTLAB</span>
       </a>
       <nav class="desktop-nav hidden items-center gap-7 text-sm font-semibold text-white/75 md:flex">
@@ -1240,86 +1254,86 @@
         <a href="#capabilities" class="transition-colors hover:text-white">Capabilities</a>
         <a href="#stats" class="transition-colors hover:text-white">Stats</a>
         <a href="#team" class="transition-colors hover:text-white">Team</a>
-        <a href="#contact" class="transition-colors hover:text-white">Contact</a>
       </nav>
       <div class="flex items-center gap-2 sm:gap-3">
-        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme"
+          title="Toggle light/dark mode">
           <span id="themeIcon">🌙</span>
         </button>
-        <a href="https://animeshpatra.me" class="hidden rounded-btn border border-white/20 px-5 py-2.5 text-sm font-semibold text-white/85 transition hover:border-neonBlue/60 hover:text-white sm:inline-block">Main Site</a>
-        <button id="mobileMenuBtn" class="mobile-menu-btn md:hidden flex items-center justify-center" type="button" aria-label="Toggle navigation menu">
-          <span>☰</span>
-        </button>
+        <a href="https://animeshpatra.dev"
+          class="hidden rounded-btn border border-white/20 px-5 py-2.5 text-sm font-semibold text-white/85 transition hover:border-neonBlue/60 hover:text-white sm:inline-block">Main
+          Site</a>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Navigation Overlay -->
-  <div id="mobileMenu" class="fixed inset-x-0 top-[73px] z-30 hidden border-b border-white/10 bg-[#05070D]/95 p-6 backdrop-blur-xl transition-all duration-300 md:hidden [data-theme='light']:bg-white/95 [data-theme='light']:border-slate-200">
-    <nav class="flex flex-col gap-4 text-base font-semibold text-white/85 [data-theme='light']:text-slate-800">
-      <a href="#top" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Home</a>
-      <a href="#products" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Products</a>
-      <a href="#roadmap" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Roadmap</a>
-      <a href="#tech-stack" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Tech Stack</a>
-      <a href="#capabilities" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Capabilities</a>
-      <a href="#stats" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Stats</a>
-      <a href="#team" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Team</a>
-      <a href="#contact" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Contact</a>
-      <a href="https://animeshpatra.me" class="rounded-btn border border-white/20 px-5 py-2.5 text-center text-sm font-semibold text-white/85 transition hover:border-neonBlue/60 hover:text-white justify-center">Main Site</a>
-    </nav>
-  </div>
-
   <main>
-    <section class="relative px-6 pb-20 pt-16 md:pb-32 md:pt-28 lg:px-8">
+    <section class="relative pt-10 md:pt-16 px-6 pb-20 md:pb-32 lg:px-8">
       <div class="mx-auto grid w-full max-w-6xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <!-- Left Side: Core Startup Copy & CTA -->
         <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
           <!-- NEXTLAB Badge -->
-          <div class="reveal hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neonBlue/30 bg-neonBlue/10 text-[11px] font-bold uppercase tracking-[0.15em] text-neonBlue mb-6 shadow-[0_0_15px_rgba(77,124,254,0.1)]">
+          <div
+            class="reveal hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neonBlue/30 bg-neonBlue/10 text-[11px] font-bold uppercase tracking-[0.15em] text-neonBlue mb-6 shadow-[0_0_15px_rgba(77,124,254,0.1)]">
             ✨ NextLab Innovations
           </div>
-          
+
           <!-- Headline -->
-          <h1 class="reveal hero-headline font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.12] min-h-[2.4em] sm:min-h-[2.2em] lg:min-h-[2.5em] w-full">
+          <h1
+            class="reveal hero-headline font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.12] w-full">
             Building <br class="sm:hidden">
-            <span id="typing-text" class="bg-gradient-to-r from-neonBlue via-[#82a5ff] to-neonPurple bg-clip-text text-transparent"></span><span id="typing-cursor" class="cursor text-neonBlue">|</span>
+            <span class="inline-flex align-bottom min-w-[280px] md:min-w-[400px]">
+              <span id="hero-word" class="block pb-1 bg-gradient-to-r from-neonBlue via-[#82a5ff] to-neonPurple bg-clip-text text-transparent transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform translate-y-0 opacity-100">AI Products</span>
+            </span>
           </h1>
-          
+
           <!-- Subheadline -->
           <p class="reveal hero-desc mt-6 max-w-xl text-base md:text-lg leading-relaxed text-white/75">
-            We build intelligent digital products, AI-powered systems, and scalable platforms engineered for modern businesses.
+            We build intelligent digital products, AI-powered systems, and scalable platforms engineered for modern
+            businesses.
           </p>
-          
+
           <!-- CTA Buttons -->
           <div class="reveal hero-btns mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
-            <a href="#contact" class="rounded-[18px] bg-gradient-to-r from-neonBlue to-neonPurple px-7 py-3.5 text-sm font-bold text-white shadow-glow hover:shadow-[0_0_24px_rgba(77,124,254,0.45)] transition duration-300 hover:translate-y-[-2px] active:scale-[0.98]">
+            <a href="https://animeshpatra.dev/#contact"
+              class="rounded-[18px] bg-gradient-to-r from-neonBlue to-neonPurple px-7 py-3.5 text-sm font-bold text-white shadow-glow hover:shadow-[0_0_24px_rgba(77,124,254,0.45)] transition duration-300 hover:translate-y-[-2px] active:scale-[0.98]">
               Explore Services
             </a>
-            <a href="#contact" class="rounded-[18px] border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-bold text-white/90 backdrop-blur-md transition duration-300 hover:border-neonBlue/60 hover:bg-white/10 hover:translate-y-[-2px] active:scale-[0.98]">
+            <a href="https://animeshpatra.dev/#contact"
+              class="rounded-[18px] border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-bold text-white/90 backdrop-blur-md transition duration-300 hover:border-neonBlue/60 hover:bg-white/10 hover:translate-y-[-2px] active:scale-[0.98]">
               Build with NextLab
             </a>
           </div>
-  
+
           <!-- Trust Indicators -->
-          <div class="reveal hero-trust mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 lg:justify-start text-xs font-semibold uppercase tracking-wider text-white/60">
+          <div
+            class="reveal hero-trust mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 lg:justify-start text-xs font-semibold uppercase tracking-wider text-white/60">
             <span class="flex items-center gap-2"><span class="text-neonBlue text-sm">✓</span> AI Products</span>
             <span class="flex items-center gap-2"><span class="text-neonBlue text-sm">✓</span> SaaS Platforms</span>
             <span class="flex items-center gap-2"><span class="text-neonBlue text-sm">✓</span> Startup Solutions</span>
           </div>
         </div>
-  
+
         <div class="reveal relative mx-auto w-full max-w-[440px] lg:max-w-none">
           <div id="floatingIconWrap" class="glass rounded-[32px] p-6 border border-white/20 relative group">
             <!-- Inner container -->
-            <div class="rounded-[24px] border border-white/10 bg-black/40 p-8 flex flex-col items-center justify-center relative z-10">
-              <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              
-              <img id="floatingIcon" src="images/main_logo.png" alt="NextLab app icon" class="w-48 h-48 rounded-[24px] border border-white/15 object-cover shadow-[0_16px_48px_rgba(77,124,254,0.22)]" loading="eager" decoding="async" />
-              
-              <p class="logo-text-glow mt-8 text-center font-display text-base font-bold tracking-[0.28em] text-white/90 uppercase">
+            <div
+              class="rounded-[24px] border border-white/10 bg-black/40 p-8 flex flex-col items-center justify-center relative z-10">
+              <div
+                class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent">
+              </div>
+
+              <img id="floatingIcon" src="images/main_logo.png" alt="NextLab app icon"
+                class="w-48 h-48 rounded-[24px] border border-white/15 object-cover shadow-[0_16px_48px_rgba(77,124,254,0.22)]"
+                loading="eager" decoding="async" />
+
+              <p
+                class="logo-text-glow mt-8 text-center font-display text-base font-bold tracking-[0.28em] text-white/90 uppercase">
                 Innovate. Build. Elevate.
               </p>
-              <div class="mt-4 h-[2px] w-[160px] rounded-full bg-gradient-to-r from-neonBlue/20 via-white/60 to-neonPurple/20"></div>
+              <div
+                class="mt-4 h-[2px] w-[160px] rounded-full bg-gradient-to-r from-neonBlue/20 via-white/60 to-neonPurple/20">
+              </div>
             </div>
           </div>
         </div>
@@ -1333,82 +1347,79 @@
         <div class="reveal text-center mb-14">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonBlue">Engineering Stack</p>
           <h2 class="mt-4 font-display text-3xl font-extrabold text-white sm:text-4xl tracking-tight">Technologies We Build With</h2>
-          <p class="mt-4 text-sm text-white/60 max-w-xl mx-auto">A curated set of modern tools we use to ship fast, scale reliably, and innovate continuously.</p>
+          <p class="mt-4 text-sm text-white/60 max-w-xl mx-auto">A curated set of cutting-edge tools we use to ship fast, scale reliably, and innovate continuously.</p>
         </div>
 
         <!-- Tech categories grid -->
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
 
-          <!-- Frontend -->
-          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonBlue/10 group bg-white/[0.02] flex flex-col" style="transition-delay:0ms">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="w-8 h-8 rounded-lg bg-neonBlue/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">🖥</span>
-              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">Frontend</p>
+          <!-- Mobile & Frontend -->
+          <div data-reveal="fade-up" class="glass rounded-2xl p-5 border border-white/10 transition-all duration-300 group hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(77,124,254,0.1)]" style="transition-delay:0ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">📱</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">App & Web</p>
             </div>
-            <ul class="space-y-3 mt-auto">
+            <ul class="space-y-2.5">
               <li class="tech-chip"><span class="tech-icon" style="color:#54C5F8">❖</span>Flutter</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">▲</span>Next.js</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#61DAFB">⚛</span>React</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#3178C6">⬡</span>TypeScript</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#38BDF8">◈</span>Tailwind CSS</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#0175C2">◆</span>Dart</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">▲</span>Responsive Web Apps</li>
             </ul>
           </div>
 
-          <!-- Backend -->
-          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonPurple/10 group bg-white/[0.02] flex flex-col" style="transition-delay:60ms">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="w-8 h-8 rounded-lg bg-neonPurple/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">⚙</span>
-              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">Backend</p>
+          <!-- Backend & API -->
+          <div data-reveal="fade-up" class="glass rounded-2xl p-5 border border-white/10 transition-all duration-300 group hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(154,92,255,0.1)]" style="transition-delay:60ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonPurple/15 flex items-center justify-center text-sm">⚙</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonPurple">Backend Architecture</p>
             </div>
-            <ul class="space-y-3 mt-auto">
+            <ul class="space-y-2.5">
               <li class="tech-chip"><span class="tech-icon" style="color:#059669">⚡</span>FastAPI</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#68A063">⬡</span>Node.js</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#00ADD8">◉</span>Go</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#F7C948">🐍</span>Python</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#3ECF8E">🔗</span>REST APIs</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#9A5CFF">◉</span>Microservices</li>
             </ul>
           </div>
 
-          <!-- AI -->
-          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonBlue/10 group bg-white/[0.02] flex flex-col" style="transition-delay:120ms">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="w-8 h-8 rounded-lg bg-neonBlue/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">🤖</span>
-              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">AI / LLM</p>
+          <!-- Database & Data -->
+          <div data-reveal="fade-up" class="glass rounded-2xl p-5 border border-white/10 transition-all duration-300 group hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(77,124,254,0.1)]" style="transition-delay:120ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">🗄</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">Data Layer</p>
             </div>
-            <ul class="space-y-3 mt-auto">
-              <li class="tech-chip"><span class="tech-icon" style="color:#10A37F">◆</span>OpenAI</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#4285F4">✦</span>Gemini</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#1C3C4A">⛓</span>LangChain</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">⬡</span>MCP</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#9A5CFF">◉</span>RAG & Agents</li>
+            <ul class="space-y-2.5">
+              <li class="tech-chip"><span class="tech-icon" style="color:#336791">◉</span>PostgreSQL</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#DC382D">◼</span>Redis</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#FFCA28">🔥</span>Firebase</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#6366F1">◇</span>Vector Database</li>
+            </ul>
+          </div>
+
+          <!-- AI & ML -->
+          <div data-reveal="fade-up" class="glass rounded-2xl p-5 border border-white/10 transition-all duration-300 group hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(154,92,255,0.1)]" style="transition-delay:180ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonPurple/15 flex items-center justify-center text-sm">🤖</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonPurple">AI & Models</p>
+            </div>
+            <ul class="space-y-2.5">
+              <li class="tech-chip"><span class="tech-icon" style="color:#10A37F">◆</span>OpenAI APIs</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#4285F4">✦</span>Google Gemini</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">🧠</span>LLMs</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#F59E0B">🎯</span>AI Agents & RAG</li>
             </ul>
           </div>
 
           <!-- Cloud & DevOps -->
-          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonPurple/10 group bg-white/[0.02] flex flex-col" style="transition-delay:180ms">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="w-8 h-8 rounded-lg bg-neonPurple/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">☁</span>
-              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">Cloud</p>
+          <div data-reveal="fade-up" class="glass rounded-2xl p-5 border border-white/10 transition-all duration-300 group hover:border-white/20 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(77,124,254,0.1)]" style="transition-delay:240ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">☁</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">Cloud & DevOps</p>
             </div>
-            <ul class="space-y-3 mt-auto">
+            <ul class="space-y-2.5">
               <li class="tech-chip"><span class="tech-icon" style="color:#FF9900">☁</span>AWS</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#2496ED">◼</span>Docker</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#326CE5">⚙</span>Kubernetes</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#F38020">⛅</span>Cloudflare</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">▷</span>GitHub Actions</li>
-            </ul>
-          </div>
-
-          <!-- Database -->
-          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonBlue/10 group bg-white/[0.02] flex flex-col" style="transition-delay:240ms">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="w-8 h-8 rounded-lg bg-neonBlue/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">🗄</span>
-              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">Database</p>
-            </div>
-            <ul class="space-y-3 mt-auto">
-              <li class="tech-chip"><span class="tech-icon" style="color:#336791">◉</span>PostgreSQL</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#DC382D">◼</span>Redis</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#FFCA28">🔥</span>Firebase</li>
-              <li class="tech-chip"><span class="tech-icon" style="color:#3ECF8E">◆</span>Supabase</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">▷</span>GitHub Actions & CI/CD</li>
             </ul>
           </div>
 
@@ -1416,195 +1427,254 @@
       </div>
     </section>
 
-
     <section id="products" class="px-6 py-20 md:py-32 lg:px-8 border-b border-white/5">
       <div class="mx-auto w-full max-w-6xl">
         <div class="reveal mb-16 text-center lg:text-left">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonBlue">Portfolio Showcase</p>
-          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Products We've Built</h2>
-          <p class="mt-4 max-w-xl text-base text-white/70">Real products used by real users worldwide, combining premium design with robust engineering.</p>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-          <!-- Card 1: Kashandaz (Flagship) -->
-          <article class="reveal glass rounded-card p-6 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
-            <div>
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-semibold text-neonBlue/90 uppercase tracking-wide">Mobile Application</span>
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20">LIVE</span>
-              </div>
-              <h3 class="mt-4 text-2xl font-bold text-white tracking-tight">Kashandaz Platform</h3>
-              <p class="mt-3 text-sm leading-relaxed text-white/70">
-                AI-Powered Cashback &amp; Smart Shopping Platform. Consolidates offer discovery, referral incentives, and smart deal recommendations into a secure, production-grade Android application backed by FastAPI microservices.
-              </p>
-              
-              <div class="mt-6 space-y-2">
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">⚡</span> Modern Flutter Mobile App UI
+          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Products We've
+            Built</h2>
+          <p class="mt-4 max-w-xl text-base text-white/70">Real products used by real users worldwide, combining premium
+            design with robust engineering.</p>
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+            <!-- Card 1: Kashandaz (Flagship) -->
+            <article
+              class="reveal glass rounded-card p-6 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold text-neonBlue/90 uppercase tracking-wide">Mobile Application</span>
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20">LIVE</span>
                 </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">🔒</span> Secure AWS &amp; FastAPI Backend APIs
-                </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">💳</span> Integrated Razorpay Ledger System
-                </div>
-              </div>
-            </div>
+                <h3 class="mt-4 text-2xl font-bold text-white tracking-tight">Kashandaz Platform</h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  AI-Powered Cashback &amp; Smart Shopping Platform. Consolidates offer discovery, referral incentives,
+                  and smart deal recommendations into a secure, production-grade Android application backed by FastAPI
+                  microservices.
+                </p>
 
-            <!-- Kashandaz Mobile Preview -->
-            <div class="mt-8 relative flex items-center justify-center w-full" style="overflow: visible;">
-              <div style="position: relative; width: 160px; height: 330px;">
-                <button class="phone-arrow phone-arrow--left" id="labsSliderPrev" aria-label="Previous screenshot" style="left: -52px; width: 40px; height: 40px; font-size: 16px;">&larr;</button>
-                <div class="phone-mockup" style="width: 160px; height: 330px; border-radius: 24px; border-width: 6px;">
-                  <div class="phone-notch" style="width: 50px; height: 14px; border-radius: 7px; top: 6px;"></div>
-                  <div class="phone-screen">
-                    <div class="phone-slider" id="labsKashandazSlider">
-                      <div class="phone-slide"><img src="images/home_screen.webp" alt="Kashandaz Home Screen" loading="lazy" decoding="async" /></div>
-                      <div class="phone-slide"><img src="images/wallet_screen.webp" alt="Kashandaz Wallet Screen" loading="lazy" decoding="async" /></div>
-                      <div class="phone-slide"><img src="images/activate_cashback_store.webp" alt="Kashandaz Store Activation" loading="lazy" decoding="async" /></div>
-                      <div class="phone-slide"><img src="images/stores.webp" alt="Kashandaz Merchant Stores" loading="lazy" decoding="async" /></div>
-                    </div>
-                    <div class="phone-controls" id="labsSliderDots" role="tablist" aria-label="Screenshot navigation" style="bottom: 10px; gap: 5px;">
-                      <span class="phone-dot active" data-index="0" role="tab" style="width: 6px; height: 6px;"></span>
-                      <span class="phone-dot" data-index="1" role="tab" style="width: 6px; height: 6px;"></span>
-                      <span class="phone-dot" data-index="2" role="tab" style="width: 6px; height: 6px;"></span>
-                      <span class="phone-dot" data-index="3" role="tab" style="width: 6px; height: 6px;"></span>
-                    </div>
+                <div class="mt-6 space-y-2">
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">⚡</span> Modern Flutter Mobile App UI
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">🔒</span> Secure AWS &amp; FastAPI Backend APIs
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">💳</span> Integrated Razorpay Ledger System
                   </div>
                 </div>
-                <button class="phone-arrow phone-arrow--right" id="labsSliderNext" aria-label="Next screenshot" style="right: -52px; width: 40px; height: 40px; font-size: 16px;">&rarr;</button>
               </div>
-            </div>
 
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a class="inline-flex items-center gap-2 rounded-[18px] bg-gradient-to-r from-neonBlue to-neonPurple px-6 py-3 text-xs font-bold text-white shadow-glow hover:shadow-[0_0_20px_rgba(77,124,254,0.35)] transition duration-300 hover:translate-y-[-2px] w-full justify-center" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.kashandaz.app&pcampaignid=web_share">
-                <svg viewBox="0 0 512 512" style="width:14px;height:14px;fill:currentColor;vertical-align:middle;margin-right:4px;"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58 33.3-60.7-60.7 118.7 27.4c17.5 4 17.5 28.5 0 32.5zM385.4 337.8L104.6 499l220.7-221.3 60.1 60.1z"/></svg>
-                Download on Google Play
-              </a>
-            </div>
-          </article>
-
-          <!-- Card 2: GNT -->
-          <article class="reveal glass rounded-card p-6 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
-            <div>
-              <!-- Header Row -->
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-semibold text-neonBlue/90 uppercase tracking-wide">Chrome Extension</span>
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20">LIVE</span>
-              </div>
-              <h3 class="mt-4 text-2xl font-bold text-white tracking-tight">GNT: Glass New Tab</h3>
-              <p class="mt-3 text-sm leading-relaxed text-white/70">
-                A gorgeous, Apple VisionOS-inspired browser start page featuring rich weather updates, custom wallpapers, search integrations, and productivity widgets.
-              </p>
-              
-              <!-- Highlight list -->
-              <div class="mt-6 space-y-2">
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">⚡</span> 16,000+ Active Users
-                </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">⭐</span> Featured by Google Chrome Store
-                </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">★</span> 4.8 Rating (Loved by Thousands)
-                </div>
-              </div>
-            </div>
-            <!-- Graphic Preview Frame -->
-            <div class="mt-8 relative overflow-hidden rounded-[18px] border border-white/10 bg-black/50 aspect-[1.618] flex items-center justify-center group-hover:border-white/20 transition duration-300 w-full">
-              <div class="absolute inset-0 bg-gradient-to-tr from-neonBlue/10 to-transparent opacity-60 z-20 pointer-events-none"></div>
-              <img src="images/new-image-1st.png" alt="Glass New Tab Widgets Screenshot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03] rounded-[18px] relative z-10" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none z-20"></div>
-            </div>
-          </article>
- 
-          <!-- Card 3: SmartCam+ -->
-          <article class="reveal glass rounded-card p-6 flex flex-col justify-between group hover:border-neonPurple/45 hover:shadow-glowPurple transition-all duration-300">
-            <div>
-              <!-- Header Row -->
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-semibold text-neonPurple/90 uppercase tracking-wide">Computer Vision</span>
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20">LIVE / DEMO</span>
-              </div>
-              <h3 class="mt-4 text-2xl font-bold text-white tracking-tight">SmartCam+</h3>
-              <p class="mt-3 text-sm leading-relaxed text-white/70">
-                Advanced AI-powered video surveillance and analysis platform offering anomalous motion alerts, security audit workflows, and device integration.
-              </p>
-              
-              <!-- Highlight list -->
-              <div class="mt-6 space-y-2">
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonPurple">⚡</span> Real-time Object Recognition
-                </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonPurple">🔔</span> Instant Anomalous Alerts
-                </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonPurple">🔒</span> Edge Security Protocol
-                </div>
-              </div>
-            </div>
-            
-            <!-- Graphic Preview Frame -->
-            <div class="mt-8 relative overflow-hidden rounded-[18px] border border-white/10 bg-black/50 aspect-[1.618] flex items-center justify-center group-hover:border-white/20 transition duration-300">
-              <div class="absolute inset-0 bg-gradient-to-tr from-neonPurple/10 to-transparent opacity-60"></div>
-              <div class="w-[90%] h-[80%] rounded-[14px] border border-white/20 bg-white/5 relative z-10 transition-transform duration-500 group-hover:scale-[1.03] group-hover:-rotate-1 overflow-hidden">
-                <img src="images/engineer_1.png" alt="SmartCam Feed Analysis Preview" class="w-full h-full object-cover transition-transform duration-500" loading="lazy" decoding="async" />
-                <div class="absolute inset-0 border border-dashed border-neonPurple/40 rounded-lg m-2 flex items-center justify-center pointer-events-none">
-                  <span class="absolute top-2 left-2 text-[8px] font-bold text-neonPurple/90 tracking-wider">CAM_01 // DETECTING</span>
-                  <div class="w-10 h-10 rounded-full border border-neonPurple/50 flex items-center justify-center animate-pulse">
-                    <span class="w-2.5 h-2.5 rounded-full bg-neonPurple"></span>
+              <!-- Kashandaz Mobile Preview -->
+              <div class="mt-8 relative flex items-center justify-center w-full" style="overflow: visible;">
+                <div style="position: relative; width: 160px; height: 330px;">
+                  <button class="phone-arrow phone-arrow--left" id="labsSliderPrev" aria-label="Previous screenshot"
+                    style="left: -52px; width: 40px; height: 40px; font-size: 16px;">&larr;</button>
+                  <div class="phone-mockup"
+                    style="width: 160px; height: 330px; border-radius: 24px; border-width: 6px;">
+                    <div class="phone-notch" style="width: 50px; height: 14px; border-radius: 7px; top: 6px;"></div>
+                    <div class="phone-screen">
+                      <div class="phone-slider" id="labsKashandazSlider">
+                        <div class="phone-slide"><img src="images/home_screen.webp" alt="Kashandaz Home Screen"
+                            loading="lazy" decoding="async" /></div>
+                        <div class="phone-slide"><img src="images/wallet_screen.webp" alt="Kashandaz Wallet Screen"
+                            loading="lazy" decoding="async" /></div>
+                        <div class="phone-slide"><img src="images/activate_cashback_store.webp"
+                            alt="Kashandaz Store Activation" loading="lazy" decoding="async" /></div>
+                        <div class="phone-slide"><img src="images/stores.webp" alt="Kashandaz Merchant Stores"
+                            loading="lazy" decoding="async" /></div>
+                      </div>
+                      <div class="phone-controls" id="labsSliderDots" role="tablist" aria-label="Screenshot navigation"
+                        style="bottom: 10px; gap: 5px;">
+                        <span class="phone-dot active" data-index="0" role="tab"
+                          style="width: 6px; height: 6px;"></span>
+                        <span class="phone-dot" data-index="1" role="tab" style="width: 6px; height: 6px;"></span>
+                        <span class="phone-dot" data-index="2" role="tab" style="width: 6px; height: 6px;"></span>
+                        <span class="phone-dot" data-index="3" role="tab" style="width: 6px; height: 6px;"></span>
+                      </div>
+                    </div>
                   </div>
-                  <span class="absolute bottom-2 right-2 text-[8px] font-semibold bg-neonPurple/20 text-neonPurple px-1.5 py-0.5 rounded border border-neonPurple/30">98.4% Confidence</span>
+                  <button class="phone-arrow phone-arrow--right" id="labsSliderNext" aria-label="Next screenshot"
+                    style="right: -52px; width: 40px; height: 40px; font-size: 16px;">&rarr;</button>
                 </div>
               </div>
-            </div>
-          </article>
- 
-          <!-- Card 4: AI Resume Analyzer -->
-          <article class="reveal glass rounded-card p-6 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
-            <div>
-              <!-- Header Row -->
-              <div class="flex items-center justify-between">
-                <span class="text-xs font-semibold text-neonBlue/90 uppercase tracking-wide">AI Platform</span>
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20">LIVE</span>
+
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a class="inline-flex items-center gap-2 rounded-[18px] bg-gradient-to-r from-neonBlue to-neonPurple px-6 py-3 text-xs font-bold text-white shadow-glow hover:shadow-[0_0_20px_rgba(77,124,254,0.35)] transition duration-300 hover:translate-y-[-2px] w-full justify-center"
+                  target="_blank" rel="noopener noreferrer"
+                  href="https://play.google.com/store/apps/details?id=com.kashandaz.app&pcampaignid=web_share">
+                  <svg viewBox="0 0 512 512"
+                    style="width:14px;height:14px;fill:currentColor;vertical-align:middle;margin-right:4px;">
+                    <path
+                      d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58 33.3-60.7-60.7 118.7 27.4c17.5 4 17.5 28.5 0 32.5zM385.4 337.8L104.6 499l220.7-221.3 60.1 60.1z" />
+                  </svg>
+                  Download on Google Play
+                </a>
               </div>
-              <h3 class="mt-4 text-2xl font-bold text-white tracking-tight">AI Resume Analyzer</h3>
-              <p class="mt-3 text-sm leading-relaxed text-white/70">
-                Automated HR processing platform that parses resumes against specific job listings to rank candidates and highlight match metrics with NLP.
-              </p>
-              
-              <!-- Highlight list -->
-              <div class="mt-6 space-y-2">
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">⚡</span> Instant Resume Parsing &amp; Extraction
+            </article>
+
+            <!-- Card 2: GNT -->
+            <article
+              class="reveal glass rounded-card p-6 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
+              <div>
+                <!-- Header Row -->
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold text-neonBlue/90 uppercase tracking-wide">Chrome Extension</span>
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20">LIVE</span>
                 </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">🎯</span> Detailed Job Compatibility Scoring
+                <h3 class="mt-4 text-2xl font-bold text-white tracking-tight">GNT: Glass New Tab</h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  A gorgeous, Apple VisionOS-inspired browser start page featuring rich weather updates, custom
+                  wallpapers, search integrations, and productivity widgets.
+                </p>
+
+                <!-- Highlight list -->
+                <div class="mt-6 space-y-2">
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">⚡</span> 16,000+ Active Users
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">⭐</span> Featured by Google Chrome Store
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">★</span> 4.8 Rating (Loved by Thousands)
+                  </div>
                 </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
-                  <span class="text-neonBlue">💡</span> Keyword Optimization Recommendations
+                
+                <a href="https://chromewebstore.google.com/detail/pdjebhcifgoembcidgjhdjohnkgcbflb?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 rounded-[14px] bg-white/10 hover:bg-white/20 border border-white/20 px-5 py-2.5 text-sm font-bold text-white transition-all w-fit">
+                  <span class="text-base">🌐</span> Open in Chrome Store
+                </a>
+              </div>
+              <!-- Graphic Preview Frame -->
+              <div
+                class="mt-8 relative overflow-hidden rounded-[18px] border border-white/10 bg-black/50 aspect-[1.618] flex items-center justify-center group-hover:border-white/20 transition duration-300 w-full">
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-neonBlue/10 to-transparent opacity-60 z-20 pointer-events-none">
+                </div>
+                <img src="images/new-image-1st.png" alt="Glass New Tab Widgets Screenshot"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03] rounded-[18px] relative z-10"
+                  loading="lazy" decoding="async" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none z-20">
                 </div>
               </div>
-            </div>
-            
-            <!-- Graphic Preview Frame -->
-            <div class="mt-8 relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 aspect-[1.618] flex items-center justify-center group-hover:border-white/20 transition duration-300">
-              <div class="absolute inset-0 bg-gradient-to-tr from-neonBlue/10 to-transparent opacity-60"></div>
-              <div class="w-[90%] h-[80%] rounded-xl border border-white/20 bg-white/5 backdrop-blur-md p-3.5 shadow-glass flex flex-col justify-between relative z-10 transition-transform duration-500 group-hover:scale-[1.03] overflow-hidden">
-                <div class="flex justify-between items-center text-[9px] border-b border-white/10 pb-1">
-                  <span class="text-white/60 font-semibold">Resume_Analysis.pdf</span>
-                  <span class="text-neonBlue font-bold">92% MATCH</span>
+            </article>
+
+            <!-- Card 3: SmartCam+ -->
+            <article
+              class="reveal glass rounded-card p-6 flex flex-col justify-between group hover:border-neonPurple/45 hover:shadow-glowPurple transition-all duration-300">
+              <div>
+                <!-- Header Row -->
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold text-neonPurple/90 uppercase tracking-wide">Computer Vision</span>
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20">LIVE
+                    / DEMO</span>
                 </div>
-                <div class="space-y-1.5 py-2">
-                  <div class="h-1.5 w-full bg-white/10 rounded overflow-hidden"><div class="h-full w-full bg-neonBlue progress-bar-1"></div></div>
-                  <div class="h-1.5 w-3/4 bg-white/10 rounded overflow-hidden"><div class="h-full w-full bg-neonPurple progress-bar-2"></div></div>
-                  <div class="h-1.5 w-1/2 bg-white/10 rounded overflow-hidden"><div class="h-full w-full bg-neonBlue progress-bar-3"></div></div>
+                <h3 class="mt-4 text-2xl font-bold text-white tracking-tight">SmartCam+</h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  Advanced AI-powered video surveillance and analysis platform offering anomalous motion alerts,
+                  security audit workflows, and device integration.
+                </p>
+
+                <!-- Highlight list -->
+                <div class="mt-6 space-y-2">
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonPurple">⚡</span> Real-time Object Recognition
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonPurple">🔔</span> Instant Anomalous Alerts
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonPurple">🔒</span> Edge Security Protocol
+                  </div>
                 </div>
-                <span class="text-[8px] text-white/40 text-center font-medium">NLP Keywords: React, Python, CyberSecurity</span>
               </div>
-            </div>
-          </article>
+
+              <!-- Graphic Preview Frame -->
+              <div
+                class="mt-8 relative overflow-hidden rounded-[18px] border border-white/10 bg-black/50 aspect-[1.618] flex items-center justify-center group-hover:border-white/20 transition duration-300">
+                <div class="absolute inset-0 bg-gradient-to-tr from-neonPurple/10 to-transparent opacity-60"></div>
+                <div
+                  class="w-[90%] h-[80%] rounded-[14px] border border-white/20 bg-white/5 relative z-10 transition-transform duration-500 group-hover:scale-[1.03] group-hover:-rotate-1 overflow-hidden">
+                  <img src="images/engineer_1.png" alt="SmartCam Feed Analysis Preview"
+                    class="w-full h-full object-cover transition-transform duration-500" loading="lazy"
+                    decoding="async" />
+                  <div
+                    class="absolute inset-0 border border-dashed border-neonPurple/40 rounded-lg m-2 flex items-center justify-center pointer-events-none">
+                    <span class="absolute top-2 left-2 text-[8px] font-bold text-neonPurple/90 tracking-wider">CAM_01 //
+                      DETECTING</span>
+                    <div
+                      class="w-10 h-10 rounded-full border border-neonPurple/50 flex items-center justify-center animate-pulse">
+                      <span class="w-2.5 h-2.5 rounded-full bg-neonPurple"></span>
+                    </div>
+                    <span
+                      class="absolute bottom-2 right-2 text-[8px] font-semibold bg-neonPurple/20 text-neonPurple px-1.5 py-0.5 rounded border border-neonPurple/30">98.4%
+                      Confidence</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: AI Resume Analyzer -->
+            <article
+              class="reveal glass rounded-card p-6 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
+              <div>
+                <!-- Header Row -->
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold text-neonBlue/90 uppercase tracking-wide">AI Platform</span>
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-500/10 text-green-400 border border-green-500/20">LIVE</span>
+                </div>
+                <h3 class="mt-4 text-2xl font-bold text-white tracking-tight">AI Resume Analyzer</h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  Automated HR processing platform that parses resumes against specific job listings to rank candidates
+                  and highlight match metrics with NLP.
+                </p>
+
+                <!-- Highlight list -->
+                <div class="mt-6 space-y-2">
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">⚡</span> Instant Resume Parsing &amp; Extraction
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">🎯</span> Detailed Job Compatibility Scoring
+                  </div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
+                    <span class="text-neonBlue">💡</span> Keyword Optimization Recommendations
+                  </div>
+                </div>
+              </div>
+
+              <!-- Graphic Preview Frame -->
+              <div
+                class="mt-8 relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 aspect-[1.618] flex items-center justify-center group-hover:border-white/20 transition duration-300">
+                <div class="absolute inset-0 bg-gradient-to-tr from-neonBlue/10 to-transparent opacity-60"></div>
+                <div
+                  class="w-[90%] h-[80%] rounded-xl border border-white/20 bg-white/5 backdrop-blur-md p-3.5 shadow-glass flex flex-col justify-between relative z-10 transition-transform duration-500 group-hover:scale-[1.03] overflow-hidden">
+                  <div class="flex justify-between items-center text-[9px] border-b border-white/10 pb-1">
+                    <span class="text-white/60 font-semibold">Resume_Analysis.pdf</span>
+                    <span class="text-neonBlue font-bold">92% MATCH</span>
+                  </div>
+                  <div class="space-y-1.5 py-2">
+                    <div class="h-1.5 w-full bg-white/10 rounded overflow-hidden">
+                      <div class="h-full w-full bg-neonBlue progress-bar-1"></div>
+                    </div>
+                    <div class="h-1.5 w-3/4 bg-white/10 rounded overflow-hidden">
+                      <div class="h-full w-full bg-neonPurple progress-bar-2"></div>
+                    </div>
+                    <div class="h-1.5 w-1/2 bg-white/10 rounded overflow-hidden">
+                      <div class="h-full w-full bg-neonBlue progress-bar-3"></div>
+                    </div>
+                  </div>
+                  <span class="text-[8px] text-white/40 text-center font-medium">NLP Keywords: React, Python,
+                    CyberSecurity</span>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
     </section>
 
     <!-- Why Choose NextLab Section -->
@@ -1612,36 +1682,44 @@
       <div class="mx-auto w-full max-w-6xl">
         <div class="reveal mb-16 text-center">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonPurple">Engineering Excellence</p>
-          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Why Choose NextLab</h2>
-          <p class="mt-4 max-w-xl mx-auto text-base text-white/70">We don't just write code. We architect secure, highly-performant, and visually stunning digital experiences.</p>
+          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Why Choose NextLab
+          </h2>
+          <p class="mt-4 max-w-xl mx-auto text-base text-white/70">We don't just write code. We architect secure,
+            highly-performant, and visually stunning digital experiences.</p>
         </div>
         <div class="grid gap-6 md:grid-cols-3">
-          <div class="reveal glass rounded-card p-8 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
+          <div
+            class="reveal glass rounded-card p-8 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
             <div>
               <span class="text-3xl">🔐</span>
               <h3 class="mt-6 text-xl font-bold text-white tracking-tight">Security-First Mindset</h3>
               <p class="mt-4 text-sm leading-relaxed text-white/70">
-                From JWT authentication controls and database transaction isolation levels to active penetration scans, security is baked into every layer we deploy.
+                From JWT authentication controls and database transaction isolation levels to active penetration scans,
+                security is baked into every layer we deploy.
               </p>
             </div>
             <div class="mt-6 text-xs font-bold text-neonBlue uppercase tracking-wider">Zero Attribution Leaks</div>
           </div>
-          <div class="reveal glass rounded-card p-8 flex flex-col justify-between group hover:border-neonPurple/45 hover:shadow-glow transition-all duration-300">
+          <div
+            class="reveal glass rounded-card p-8 flex flex-col justify-between group hover:border-neonPurple/45 hover:shadow-glow transition-all duration-300">
             <div>
               <span class="text-3xl">🚀</span>
               <h3 class="mt-6 text-xl font-bold text-white tracking-tight">High-Performance Focus</h3>
               <p class="mt-4 text-sm leading-relaxed text-white/70">
-                Our FastAPI and PostgreSQL architectures are optimized for micro-second query processing, minimal latencies, and horizontal scaling limits.
+                Our FastAPI and PostgreSQL architectures are optimized for micro-second query processing, minimal
+                latencies, and horizontal scaling limits.
               </p>
             </div>
             <div class="mt-6 text-xs font-bold text-neonPurple uppercase tracking-wider">Sub-100ms API Cycles</div>
           </div>
-          <div class="reveal glass rounded-card p-8 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
+          <div
+            class="reveal glass rounded-card p-8 flex flex-col justify-between group hover:border-neonBlue/45 hover:shadow-glow transition-all duration-300">
             <div>
               <span class="text-3xl">💎</span>
               <h3 class="mt-6 text-xl font-bold text-white tracking-tight">Immersive Visual Design</h3>
               <p class="mt-4 text-sm leading-relaxed text-white/70">
-                Inspired by iOS glassmorphism. We design layouts that feel premium, fluid, responsive across all viewports, and rich with micro-interactions.
+                Inspired by iOS glassmorphism. We design layouts that feel premium, fluid, responsive across all
+                viewports, and rich with micro-interactions.
               </p>
             </div>
             <div class="mt-6 text-xs font-bold text-neonBlue uppercase tracking-wider">Liquid Glass Aesthetics</div>
@@ -1654,38 +1732,50 @@
       <div class="mx-auto w-full max-w-5xl">
         <div class="reveal mb-16 text-center">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonPurple">Active Roadmap</p>
-          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Currently Building</h2>
-          <p class="mt-4 text-base text-white/70">The future of NextLab. Scalable systems and productivity platforms under active development.</p>
+          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Currently Building
+          </h2>
+          <p class="mt-4 text-base text-white/70">The future of NextLab. Scalable systems and productivity platforms
+            under active development.</p>
         </div>
-        
+
         <!-- Timeline Container -->
         <div class="relative pl-6 sm:pl-8 border-l border-white/10 space-y-12">
           <!-- Step 1: Kashandaz V2 -->
           <div class="reveal relative">
             <!-- Bullet indicator -->
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonBlue border-4 border-night shadow-[0_0_12px_rgba(77,124,254,0.6)]"></div>
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonBlue border-4 border-night shadow-[0_0_12px_rgba(77,124,254,0.6)]">
+            </div>
             <div class="glass rounded-card p-6 md:p-8 hover:border-white/20 transition duration-300">
               <div class="flex flex-wrap items-center justify-between gap-3">
                 <h3 class="text-2xl font-bold text-white tracking-tight">Kashandaz V2 &amp; Merchant SDK</h3>
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-neonBlue/10 text-neonBlue border border-neonBlue/20">IN PROGRESS</span>
+                <span
+                  class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-neonBlue/10 text-neonBlue border border-neonBlue/20">IN
+                  PROGRESS</span>
               </div>
               <p class="mt-3 text-sm md:text-base leading-relaxed text-white/70">
-                Scaling the flagship platform to support third-party merchant dashboard APIs, automatic browser-extension validation, and AI-driven deal suggestions.
+                Scaling the flagship platform to support third-party merchant dashboard APIs, automatic
+                browser-extension validation, and AI-driven deal suggestions.
               </p>
             </div>
           </div>
-          
+
           <!-- Step 2: AI Business Suite -->
           <div class="reveal relative">
             <!-- Bullet indicator -->
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonPurple border-4 border-night shadow-[0_0_12px_rgba(154,92,255,0.6)]"></div>
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonPurple border-4 border-night shadow-[0_0_12px_rgba(154,92,255,0.6)]">
+            </div>
             <div class="glass rounded-card p-6 md:p-8 hover:border-white/20 transition duration-300">
               <div class="flex flex-wrap items-center justify-between gap-3">
                 <h3 class="text-2xl font-bold text-white tracking-tight">AI Business Suite</h3>
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-neonPurple/10 text-neonPurple border border-neonPurple/20">IN PROGRESS</span>
+                <span
+                  class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-neonPurple/10 text-neonPurple border border-neonPurple/20">IN
+                  PROGRESS</span>
               </div>
               <p class="mt-3 text-sm md:text-base leading-relaxed text-white/70">
-                A unified platform automating repetitive business tasks, data extraction, and report analysis through intelligent agent workflows and custom LLM integrations.
+                A unified platform automating repetitive business tasks, data extraction, and report analysis through
+                intelligent agent workflows and custom LLM integrations.
               </p>
             </div>
           </div>
@@ -1693,14 +1783,18 @@
           <!-- Step 3: Future Startup Products -->
           <div class="reveal relative">
             <!-- Bullet indicator -->
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-white/30 border-4 border-night"></div>
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-white/30 border-4 border-night">
+            </div>
             <div class="glass rounded-card p-6 md:p-8 hover:border-white/20 transition duration-300">
               <div class="flex flex-wrap items-center justify-between gap-3">
                 <h3 class="text-2xl font-bold text-white tracking-tight">Future Startup Products</h3>
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-white/50 border border-white/10">PLANNED</span>
+                <span
+                  class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-white/50 border border-white/10">PLANNED</span>
               </div>
               <p class="mt-3 text-sm md:text-base leading-relaxed text-white/70">
-                Scalable SaaS ecosystems and developer productivity frameworks built to eliminate operational friction and secure technical infrastructure.
+                Scalable SaaS ecosystems and developer productivity frameworks built to eliminate operational friction
+                and secure technical infrastructure.
               </p>
             </div>
           </div>
@@ -1712,63 +1806,89 @@
       <div class="mx-auto w-full max-w-6xl">
         <div class="reveal mb-16 text-center lg:text-left">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonBlue">Studio Capabilities</p>
-          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Our Core Capabilities</h2>
-          <p class="mt-4 max-w-xl text-base text-white/70">Engineered to scale. We combine state-of-the-art AI systems with highly secure backend architectures and modern product design.</p>
+          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Our Core
+            Capabilities</h2>
+          <p class="mt-4 max-w-xl text-base text-white/70">Engineered to scale. We combine state-of-the-art AI systems
+            with highly secure backend architectures and modern product design.</p>
         </div>
-        
+
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <!-- Card 1: AI Development -->
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <div class="p-3.5 rounded-xl bg-neonBlue/10 border border-neonBlue/20 mb-5">
-              <svg class="w-6 h-6 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+              <svg class="w-6 h-6 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
             </div>
             <h3 class="text-lg font-bold text-white">AI Development</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Custom Generative AI tools, API pipelines, prompt design, and fine-tuning models matching specific business contexts.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Custom Generative AI tools, API pipelines, prompt
+              design, and fine-tuning models matching specific business contexts.</p>
           </article>
-          
+
           <!-- Card 2: SaaS Platforms -->
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <div class="p-3.5 rounded-xl bg-neonPurple/10 border border-neonPurple/20 mb-5">
-              <svg class="w-6 h-6 text-neonPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <svg class="w-6 h-6 text-neonPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
             </div>
             <h3 class="text-lg font-bold text-white">SaaS Platforms</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Scalable subscription systems, customer onboarding dashboards, secure payment flows, and robust customer analytics.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Scalable subscription systems, customer onboarding
+              dashboards, secure payment flows, and robust customer analytics.</p>
           </article>
 
           <!-- Card 3: Cyber Security -->
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <div class="p-3.5 rounded-xl bg-neonBlue/10 border border-neonBlue/20 mb-5">
-              <svg class="w-6 h-6 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <svg class="w-6 h-6 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
             </div>
             <h3 class="text-lg font-bold text-white">Cyber Security</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Advanced penetration testing, data encryption protocols, vulnerability analysis, and compliance audits for web assets.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Advanced penetration testing, data encryption
+              protocols, vulnerability analysis, and compliance audits for web assets.</p>
           </article>
 
           <!-- Card 4: Cloud Infrastructure -->
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <div class="p-3.5 rounded-xl bg-neonPurple/10 border border-neonPurple/20 mb-5">
-              <svg class="w-6 h-6 text-neonPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+              <svg class="w-6 h-6 text-neonPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+              </svg>
             </div>
             <h3 class="text-lg font-bold text-white">Cloud Infrastructure</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Optimized container configurations, automatic scaling rules, secure VPC setups, and rapid deployment routines.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Optimized container configurations, automatic scaling
+              rules, secure VPC setups, and rapid deployment routines.</p>
           </article>
 
           <!-- Card 5: Automation Systems -->
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <div class="p-3.5 rounded-xl bg-neonBlue/10 border border-neonBlue/20 mb-5">
-              <svg class="w-6 h-6 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+              <svg class="w-6 h-6 text-neonBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
             </div>
             <h3 class="text-lg font-bold text-white">Automation Systems</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Eliminating overhead. Custom web scrapers, dynamic API synchronization tasks, and scheduled background workers.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Eliminating overhead. Custom web scrapers, dynamic API
+              synchronization tasks, and scheduled background workers.</p>
           </article>
 
           <!-- Card 6: Product Design -->
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <div class="p-3.5 rounded-xl bg-neonPurple/10 border border-neonPurple/20 mb-5">
-              <svg class="w-6 h-6 text-neonPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              <svg class="w-6 h-6 text-neonPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
             </div>
             <h3 class="text-lg font-bold text-white">Product Design</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Apple/VisionOS-inspired aesthetics, micro-interactions, responsive frameworks, and polished UI/UX systems.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Apple/VisionOS-inspired aesthetics,
+              micro-interactions, responsive frameworks, and polished UI/UX systems.</p>
           </article>
         </div>
       </div>
@@ -1779,51 +1899,65 @@
       <div class="mx-auto w-full max-w-5xl">
         <div class="reveal mb-16 text-center">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonBlue">Our Process</p>
-          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Product Development Workflow</h2>
-          <p class="mt-4 text-base text-white/70">How we transform complex startup ideas into production-ready software solutions.</p>
+          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Product
+            Development Workflow</h2>
+          <p class="mt-4 text-base text-white/70">How we transform complex startup ideas into production-ready software
+            solutions.</p>
         </div>
-        
+
         <div class="relative pl-6 sm:pl-8 border-l border-white/10 space-y-12">
           <!-- Step 1 -->
           <div class="reveal relative">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonBlue border-4 border-night shadow-[0_0_12px_rgba(77,124,254,0.6)]"></div>
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonBlue border-4 border-night shadow-[0_0_12px_rgba(77,124,254,0.6)]">
+            </div>
             <div class="glass rounded-card p-6 md:p-8 hover:border-white/20 transition duration-300">
               <h3 class="text-xl font-bold text-white tracking-tight">01. Discovery &amp; Scope</h3>
               <p class="mt-3 text-sm md:text-base leading-relaxed text-white/70">
-                Understanding target demographics, outlining strict product features, and defining scalability milestones before typing the first line of code.
+                Understanding target demographics, outlining strict product features, and defining scalability
+                milestones before typing the first line of code.
               </p>
             </div>
           </div>
-          
+
           <!-- Step 2 -->
           <div class="reveal relative">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonPurple border-4 border-night shadow-[0_0_12px_rgba(154,92,255,0.6)]"></div>
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonPurple border-4 border-night shadow-[0_0_12px_rgba(154,92,255,0.6)]">
+            </div>
             <div class="glass rounded-card p-6 md:p-8 hover:border-white/20 transition duration-300">
               <h3 class="text-xl font-bold text-white tracking-tight">02. Architecture Design</h3>
               <p class="mt-3 text-sm md:text-base leading-relaxed text-white/70">
-                Modeling relational databases, planning secure Firebase/OAuth authentication boundaries, and designing low-overhead asynchronous microservices.
+                Modeling relational databases, planning secure Firebase/OAuth authentication boundaries, and designing
+                low-overhead asynchronous microservices.
               </p>
             </div>
           </div>
 
           <!-- Step 3 -->
           <div class="reveal relative">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonBlue border-4 border-night shadow-[0_0_12px_rgba(77,124,254,0.6)]"></div>
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonBlue border-4 border-night shadow-[0_0_12px_rgba(77,124,254,0.6)]">
+            </div>
             <div class="glass rounded-card p-6 md:p-8 hover:border-white/20 transition duration-300">
               <h3 class="text-xl font-bold text-white tracking-tight">03. Secure Development</h3>
               <p class="mt-3 text-sm md:text-base leading-relaxed text-white/70">
-                Shipping modular Flutter mobile interfaces, building Chrome Extension APIs, and integrating secure payment ledger scripts (e.g. Razorpay).
+                Shipping modular Flutter mobile interfaces, building Chrome Extension APIs, and integrating secure
+                payment ledger scripts (e.g. Razorpay).
               </p>
             </div>
           </div>
 
           <!-- Step 4 -->
           <div class="reveal relative">
-            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonPurple border-4 border-night shadow-[0_0_12px_rgba(154,92,255,0.6)]"></div>
+            <div
+              class="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center rounded-full bg-neonPurple border-4 border-night shadow-[0_0_12px_rgba(154,92,255,0.6)]">
+            </div>
             <div class="glass rounded-card p-6 md:p-8 hover:border-white/20 transition duration-300">
               <h3 class="text-xl font-bold text-white tracking-tight">04. Audit &amp; Deployment</h3>
               <p class="mt-3 text-sm md:text-base leading-relaxed text-white/70">
-                Conducting rigorous vulnerability testing, code coverage audits, and deploying auto-scaled cloud tasks on secure AWS environments.
+                Conducting rigorous vulnerability testing, code coverage audits, and deploying auto-scaled cloud tasks
+                on secure AWS environments.
               </p>
             </div>
           </div>
@@ -1831,38 +1965,52 @@
       </div>
     </section>
 
-    <section id="stats" class="px-6 py-20 md:py-32 lg:px-8 border-b border-white/5 bg-gradient-to-b from-transparent to-night/40">
+    <section id="stats"
+      class="px-6 py-20 md:py-32 lg:px-8 border-b border-white/5 bg-gradient-to-b from-transparent to-night/40">
       <div class="mx-auto w-full max-w-6xl">
         <div class="reveal mb-12 text-center">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonPurple">NextLab Statistics</p>
-          <h2 class="mt-4 font-display text-3xl font-extrabold text-white sm:text-4xl tracking-tight">Growth &amp; Global Impact</h2>
+          <h2 class="mt-4 font-display text-3xl font-extrabold text-white sm:text-4xl tracking-tight">Growth &amp;
+            Global Impact</h2>
         </div>
-        
-         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <!-- Stat 1 -->
-          <div class="reveal stat-card rounded-card p-8 text-center flex flex-col justify-center items-center transition duration-300">
-            <span class="text-5xl font-black tracking-tight bg-gradient-to-r from-neonBlue to-[#82a5ff] bg-clip-text text-transparent count-stat" data-target="16000" data-suffix="+">0+</span>
+          <div
+            class="reveal stat-card rounded-card p-8 text-center flex flex-col justify-center items-center transition duration-300">
+            <span
+              class="text-5xl font-black tracking-tight bg-gradient-to-r from-neonBlue to-[#82a5ff] bg-clip-text text-transparent count-stat"
+              data-target="16000" data-suffix="+">0+</span>
             <p class="mt-3 text-sm font-semibold uppercase tracking-wider text-white/90">Users Reached</p>
             <p class="mt-1 text-xs text-white/50">Across Chrome worldwide</p>
           </div>
-          
+
           <!-- Stat 2 -->
-          <div class="reveal stat-card rounded-card p-8 text-center flex flex-col justify-center items-center transition duration-300">
-            <span class="text-5xl font-black tracking-tight bg-gradient-to-r from-neonPurple to-[#b994ff] bg-clip-text text-transparent count-stat" data-target="12" data-suffix="+">0+</span>
+          <div
+            class="reveal stat-card rounded-card p-8 text-center flex flex-col justify-center items-center transition duration-300">
+            <span
+              class="text-5xl font-black tracking-tight bg-gradient-to-r from-neonPurple to-[#b994ff] bg-clip-text text-transparent count-stat"
+              data-target="12" data-suffix="+">0+</span>
             <p class="mt-3 text-sm font-semibold uppercase tracking-wider text-white/90">Projects Built</p>
             <p class="mt-1 text-xs text-white/50">SaaS, extensions &amp; tools</p>
           </div>
 
           <!-- Stat 3 -->
-          <div class="reveal stat-card rounded-card p-8 text-center flex flex-col justify-center items-center transition duration-300">
-            <span class="text-5xl font-black tracking-tight bg-gradient-to-r from-neonBlue to-[#82a5ff] bg-clip-text text-transparent count-stat-float" data-target="4.8" data-suffix="★">0.0★</span>
+          <div
+            class="reveal stat-card rounded-card p-8 text-center flex flex-col justify-center items-center transition duration-300">
+            <span
+              class="text-5xl font-black tracking-tight bg-gradient-to-r from-neonBlue to-[#82a5ff] bg-clip-text text-transparent count-stat-float"
+              data-target="4.8" data-suffix="★">0.0★</span>
             <p class="mt-3 text-sm font-semibold uppercase tracking-wider text-white/90">Average Rating</p>
             <p class="mt-1 text-xs text-white/50">Loved by productivity users</p>
           </div>
 
           <!-- Stat 4 -->
-          <div class="reveal stat-card rounded-card p-8 text-center flex flex-col justify-center items-center transition duration-300">
-            <span class="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-neonPurple to-[#b994ff] bg-clip-text text-transparent">Google Featured</span>
+          <div
+            class="reveal stat-card rounded-card p-8 text-center flex flex-col justify-center items-center transition duration-300">
+            <span
+              class="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-neonPurple to-[#b994ff] bg-clip-text text-transparent">Google
+              Featured</span>
             <p class="mt-3 text-sm font-semibold uppercase tracking-wider text-white/90">Chrome Extension</p>
             <p class="mt-1 text-xs text-white/50">Web Store Featured Badge</p>
           </div>
@@ -1874,8 +2022,10 @@
       <div class="mx-auto w-full max-w-6xl">
         <div class="reveal mb-12 text-center">
           <p class="text-sm font-semibold uppercase tracking-[0.2em] text-neonPurple">Expert Team</p>
-          <h2 class="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">Visionary Engineers Behind NextLab</h2>
-          <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/72">Seasoned technologists combining security expertise, product engineering, and strategic innovation.</p>
+          <h2 class="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">Visionary Engineers Behind NextLab
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/72">Seasoned technologists combining
+            security expertise, product engineering, and strategic innovation.</p>
         </div>
         <div class="grid gap-8 md:grid-cols-2 lg:gap-12">
           <!-- Team Member 1 -->
@@ -1883,20 +2033,34 @@
             <div class="group relative">
               <div class="glass hover-glow rounded-[28px] p-6 transition-all duration-300">
                 <div class="relative mb-6 flex justify-center">
-                  <div class="relative h-64 w-64 overflow-hidden rounded-[24px] border-2 border-white/20 bg-gradient-to-br from-neonBlue/20 to-neonPurple/20 shadow-glow">
-                    <img src="images/engineer_1.png" alt="Animesh Patra - SDE Security Expert" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
-                    <div class="pointer-events-none absolute inset-0 rounded-[22px] bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                  <div
+                    class="relative h-64 w-64 overflow-hidden rounded-[24px] border-2 border-white/20 bg-gradient-to-br from-neonBlue/20 to-neonPurple/20 shadow-glow">
+                    <img src="images/engineer_1.png" alt="Animesh Patra - SDE Security Expert"
+                      class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy" decoding="async" />
+                    <div
+                      class="pointer-events-none absolute inset-0 rounded-[22px] bg-gradient-to-t from-black/40 via-transparent to-transparent">
+                    </div>
                   </div>
-                  <div class="pointer-events-none absolute -inset-2 -z-10 rounded-[28px] bg-gradient-to-r from-neonBlue/25 to-neonPurple/15 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                  <div
+                    class="pointer-events-none absolute -inset-2 -z-10 rounded-[28px] bg-gradient-to-r from-neonBlue/25 to-neonPurple/15 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  </div>
                 </div>
                 <div class="text-center">
                   <h3 class="text-xl font-bold text-white">Animesh Patra</h3>
-                  <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-neonBlue">SDE & Security Expert</p>
-                  <p class="mt-4 text-sm leading-relaxed text-white/72">Full-stack engineer with deep expertise in secure architecture, API design, and production infrastructure. Drives technical excellence and security-first development at NextLab.</p>
+                  <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-neonBlue">SDE & Security Expert
+                  </p>
+                  <p class="mt-4 text-sm leading-relaxed text-white/72">Full-stack engineer with deep expertise in
+                    secure architecture, API design, and production infrastructure. Drives technical excellence and
+                    security-first development at NextLab.</p>
                   <div class="mt-5 flex flex-wrap justify-center gap-2">
-                    <span class="rounded-full border border-neonBlue/40 bg-neonBlue/5 px-3 py-1 text-xs font-medium text-neonBlue/90">Backend Architecture</span>
-                    <span class="rounded-full border border-neonPurple/40 bg-neonPurple/5 px-3 py-1 text-xs font-medium text-neonPurple/90">Security</span>
-                    <span class="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-white/70">DevOps</span>
+                    <span
+                      class="rounded-full border border-neonBlue/40 bg-neonBlue/5 px-3 py-1 text-xs font-medium text-neonBlue/90">Backend
+                      Architecture</span>
+                    <span
+                      class="rounded-full border border-neonPurple/40 bg-neonPurple/5 px-3 py-1 text-xs font-medium text-neonPurple/90">Security</span>
+                    <span
+                      class="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-white/70">DevOps</span>
                   </div>
                 </div>
               </div>
@@ -1908,20 +2072,35 @@
             <div class="group relative">
               <div class="glass hover-glow rounded-[28px] p-6 transition-all duration-300">
                 <div class="relative mb-6 flex justify-center">
-                  <div class="relative h-64 w-64 overflow-hidden rounded-[24px] border-2 border-white/20 bg-gradient-to-br from-neonBlue/20 to-neonPurple/20 shadow-glowPurple">
-                    <img src="images/engineer_2.jpeg" alt="Security SDLC Expert" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
-                    <div class="pointer-events-none absolute inset-0 rounded-[22px] bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                  <div
+                    class="relative h-64 w-64 overflow-hidden rounded-[24px] border-2 border-white/20 bg-gradient-to-br from-neonBlue/20 to-neonPurple/20 shadow-glowPurple">
+                    <img src="images/engineer_2.jpeg" alt="Security SDLC Expert"
+                      class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy" decoding="async" />
+                    <div
+                      class="pointer-events-none absolute inset-0 rounded-[22px] bg-gradient-to-t from-black/40 via-transparent to-transparent">
+                    </div>
                   </div>
-                  <div class="pointer-events-none absolute -inset-2 -z-10 rounded-[28px] bg-gradient-to-r from-neonPurple/25 to-neonBlue/15 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                  <div
+                    class="pointer-events-none absolute -inset-2 -z-10 rounded-[28px] bg-gradient-to-r from-neonPurple/25 to-neonBlue/15 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  </div>
                 </div>
                 <div class="text-center">
                   <h3 class="text-xl font-bold text-white">Security Specialist</h3>
-                  <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-neonPurple">SDLC Security Expert</p>
-                  <p class="mt-4 text-sm leading-relaxed text-white/72">Specializes in secure software development lifecycle, threat modeling, and compliance frameworks. Ensures NextLab products meet the highest security standards from conception to deployment.</p>
+                  <p class="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-neonPurple">SDLC Security Expert
+                  </p>
+                  <p class="mt-4 text-sm leading-relaxed text-white/72">Specializes in secure software development
+                    lifecycle, threat modeling, and compliance frameworks. Ensures NextLab products meet the highest
+                    security standards from conception to deployment.</p>
                   <div class="mt-5 flex flex-wrap justify-center gap-2">
-                    <span class="rounded-full border border-neonPurple/40 bg-neonPurple/5 px-3 py-1 text-xs font-medium text-neonPurple/90">SDLC Security</span>
-                    <span class="rounded-full border border-neonBlue/40 bg-neonBlue/5 px-3 py-1 text-xs font-medium text-neonBlue/90">Compliance</span>
-                    <span class="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-white/70">Threat Model</span>
+                    <span
+                      class="rounded-full border border-neonPurple/40 bg-neonPurple/5 px-3 py-1 text-xs font-medium text-neonPurple/90">SDLC
+                      Security</span>
+                    <span
+                      class="rounded-full border border-neonBlue/40 bg-neonBlue/5 px-3 py-1 text-xs font-medium text-neonBlue/90">Compliance</span>
+                    <span
+                      class="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-white/70">Threat
+                      Model</span>
                   </div>
                 </div>
               </div>
@@ -1936,39 +2115,47 @@
       <div class="mx-auto w-full max-w-6xl">
         <div class="reveal mb-16 text-center">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonBlue">Industries We Serve</p>
-          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Tailored Tech for Diverse Fields</h2>
-          <p class="mt-4 max-w-xl mx-auto text-base text-white/70">Delivering secure, scalable, and custom-tailored software systems for high-impact sectors.</p>
+          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Tailored Tech for
+            Diverse Fields</h2>
+          <p class="mt-4 max-w-xl mx-auto text-base text-white/70">Delivering secure, scalable, and custom-tailored
+            software systems for high-impact sectors.</p>
         </div>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <span class="text-3xl mb-4">💳</span>
             <h3 class="text-lg font-bold text-white">FinTech &amp; Ledgers</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Highly secure transactional pipelines, database ledger integrity, Razorpay integrations, and automated cashback reconciliations.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Highly secure transactional pipelines, database ledger
+              integrity, Razorpay integrations, and automated cashback reconciliations.</p>
           </article>
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <span class="text-3xl mb-4">🛒</span>
             <h3 class="text-lg font-bold text-white">E-Commerce Ecosystems</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Deal discovery interfaces, affiliate marketing validation systems, custom shopping extensions, and scalable merchant dashboard APIs.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Deal discovery interfaces, affiliate marketing
+              validation systems, custom shopping extensions, and scalable merchant dashboard APIs.</p>
           </article>
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <span class="text-3xl mb-4">🩺</span>
             <h3 class="text-lg font-bold text-white">Healthcare &amp; MedTech</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Secure data exchange layers, patient onboarding dashboards, automated scheduling scripts, and compliance-aware threat modeling.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Secure data exchange layers, patient onboarding
+              dashboards, automated scheduling scripts, and compliance-aware threat modeling.</p>
           </article>
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <span class="text-3xl mb-4">🎓</span>
             <h3 class="text-lg font-bold text-white">Education &amp; EdTech</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Interactive student portals, virtual classroom APIs, administrative tool integrations, and secure data storage solutions.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Interactive student portals, virtual classroom APIs,
+              administrative tool integrations, and secure data storage solutions.</p>
           </article>
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <span class="text-3xl mb-4">⚡</span>
             <h3 class="text-lg font-bold text-white">Productivity Tools</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">VisionOS-inspired browser dashboards (e.g. GNT), automated workflow extensions, distraction blockers, and local-first data caching.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">VisionOS-inspired browser dashboards (e.g. GNT),
+              automated workflow extensions, distraction blockers, and local-first data caching.</p>
           </article>
           <article class="reveal glass rounded-card p-6 flex flex-col items-start hover-glow transition duration-300">
             <span class="text-3xl mb-4">☁</span>
             <h3 class="text-lg font-bold text-white">SaaS Platforms</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/72">Multi-tenant cloud architectures, Stripe/Razorpay subscription pipelines, onboarding flows, and analytical data dashboards.</p>
+            <p class="mt-3 text-sm leading-relaxed text-white/72">Multi-tenant cloud architectures, Stripe/Razorpay
+              subscription pipelines, onboarding flows, and analytical data dashboards.</p>
           </article>
         </div>
       </div>
@@ -1979,16 +2166,21 @@
       <div class="mx-auto w-full max-w-6xl">
         <div class="reveal mb-16 text-center">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonPurple">Client Testimonials</p>
-          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Trusted by Innovators</h2>
-          <p class="mt-4 max-w-xl mx-auto text-base text-white/70">What startup founders and engineering teams say about partnering with NextLab.</p>
+          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Trusted by
+            Innovators</h2>
+          <p class="mt-4 max-w-xl mx-auto text-base text-white/70">What startup founders and engineering teams say about
+            partnering with NextLab.</p>
         </div>
         <div class="grid gap-8 md:grid-cols-2">
           <div class="reveal glass rounded-[24px] p-8 flex flex-col justify-between hover-glow transition duration-300">
             <p class="text-sm leading-relaxed text-white/80 italic">
-              "NextLab delivered our Flutter mobile client and FastAPI backend ahead of schedule. Their security-first focus was evident throughout the development lifecycle, especially with double-entry ledgers."
+              "NextLab delivered our Flutter mobile client and FastAPI backend ahead of schedule. Their security-first
+              focus was evident throughout the development lifecycle, especially with double-entry ledgers."
             </p>
             <div class="mt-6 flex items-center gap-4 border-t border-white/10 pt-4">
-              <div class="h-10 w-10 rounded-full bg-gradient-to-br from-neonBlue to-neonPurple flex items-center justify-center font-bold text-white text-xs">KF</div>
+              <div
+                class="h-10 w-10 rounded-full bg-gradient-to-br from-neonBlue to-neonPurple flex items-center justify-center font-bold text-white text-xs">
+                KF</div>
               <div>
                 <h4 class="text-sm font-bold text-white">Kashandaz Founder</h4>
                 <p class="text-xs text-white/50">Smart Shopping Platform</p>
@@ -1997,10 +2189,13 @@
           </div>
           <div class="reveal glass rounded-[24px] p-8 flex flex-col justify-between hover-glow transition duration-300">
             <p class="text-sm leading-relaxed text-white/80 italic">
-              "Their expertise in building secure, high-performance web applications helped us scale our user base. The attention to premium design and iOS-like glassmorphic UI details is outstanding."
+              "Their expertise in building secure, high-performance web applications helped us scale our user base. The
+              attention to premium design and iOS-like glassmorphic UI details is outstanding."
             </p>
             <div class="mt-6 flex items-center gap-4 border-t border-white/10 pt-4">
-              <div class="h-10 w-10 rounded-full bg-gradient-to-br from-neonPurple to-neonBlue flex items-center justify-center font-bold text-white text-xs">GT</div>
+              <div
+                class="h-10 w-10 rounded-full bg-gradient-to-br from-neonPurple to-neonBlue flex items-center justify-center font-bold text-white text-xs">
+                GT</div>
               <div>
                 <h4 class="text-sm font-bold text-white">GNT Lead Developer</h4>
                 <p class="text-xs text-white/50">Productivity Chrome Extension</p>
@@ -2016,57 +2211,58 @@
       <div class="mx-auto w-full max-w-4xl">
         <div class="reveal mb-16 text-center">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonBlue">Frequently Asked Questions</p>
-          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Got Questions?</h2>
-          <p class="mt-4 text-base text-white/70">Clear answers to common questions about our engineering and development workflow.</p>
+          <h2 class="mt-4 font-display text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Got Questions?
+          </h2>
+          <p class="mt-4 text-base text-white/70">Clear answers to common questions about our engineering and
+            development workflow.</p>
         </div>
         <div class="space-y-4">
           <div class="faq-item reveal">
-            <button id="faq-header-1" class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-content-1">
+            <button class="faq-trigger" type="button">
               <span>What is NextLab's core engineering expertise?</span>
               <span class="faq-icon">+</span>
             </button>
-            <div id="faq-content-1" class="faq-content-wrapper" role="region" aria-labelledby="faq-header-1">
-              <div class="faq-content">
-                We specialize in secure mobile application development (Flutter/Dart), high-throughput asynchronous backend APIs (FastAPI/Python), and fully optimized relational databases (PostgreSQL) deployed on secure cloud topologies (AWS).
-              </div>
+            <div class="faq-content">
+              We specialize in secure mobile application development (Flutter/Dart), high-throughput asynchronous
+              backend APIs (FastAPI/Python), and fully optimized relational databases (PostgreSQL) deployed on secure
+              cloud topologies (AWS).
             </div>
           </div>
           <div class="faq-item reveal">
-            <button id="faq-header-2" class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-content-2">
+            <button class="faq-trigger" type="button">
               <span>How do you handle cybersecurity and data integrity?</span>
               <span class="faq-icon">+</span>
             </button>
-            <div id="faq-content-2" class="faq-content-wrapper" role="region" aria-labelledby="faq-header-2">
-              <div class="faq-content">
-                Security is built into our SDLC. We perform active threat modeling, enforce strict relational transaction isolation, secure API endpoints with signature-validated JWT payloads, and build secure double-entry ledgers to prevent data tampering.
-              </div>
+            <div class="faq-content">
+              Security is built into our SDLC. We perform active threat modeling, enforce strict relational transaction
+              isolation, secure API endpoints with signature-validated JWT payloads, and build secure double-entry
+              ledgers to prevent data tampering.
             </div>
           </div>
           <div class="faq-item reveal">
-            <button id="faq-header-3" class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-content-3">
+            <button class="faq-trigger" type="button">
               <span>Do you work with early-stage startup founders?</span>
               <span class="faq-icon">+</span>
             </button>
-            <div id="faq-content-3" class="faq-content-wrapper" role="region" aria-labelledby="faq-header-3">
-              <div class="faq-content">
-                Yes. We act as structural technical partners, building production-grade minimum viable products (MVPs), secure SaaS infrastructure, and helping founders design a scalable path to launch.
-              </div>
+            <div class="faq-content">
+              Yes. We act as structural technical partners, building production-grade minimum viable products (MVPs),
+              secure SaaS infrastructure, and helping founders design a scalable path to launch.
             </div>
           </div>
           <div class="faq-item reveal">
-            <button id="faq-header-4" class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-content-4">
+            <button class="faq-trigger" type="button">
               <span>What is the standard development timeline?</span>
               <span class="faq-icon">+</span>
             </button>
-            <div id="faq-content-4" class="faq-content-wrapper" role="region" aria-labelledby="faq-header-4">
-              <div class="faq-content">
-                Timelines vary by scope. Small MVPs and extensions typically take 4–6 weeks, while more complex cloud SaaS ecosystems and secure mobile products require 10–12 weeks of engineering time.
-              </div>
+            <div class="faq-content">
+              Timelines vary by scope. Small MVPs and extensions typically take 4–6 weeks, while more complex cloud SaaS
+              ecosystems and secure mobile products require 10–12 weeks of engineering time.
             </div>
           </div>
         </div>
       </div>
     </section>
+
 
     <section id="contact" class="px-6 pb-24 pt-8 lg:px-8">
       <div class="reveal glass mx-auto w-full max-w-5xl rounded-container px-6 py-12 shadow-glass sm:px-10">
@@ -2081,16 +2277,7 @@
               </p>
             </div>
             
-            <div class="mt-8 space-y-4 text-sm text-white/80">
-              <div class="flex items-center gap-3">
-                <span class="text-neonBlue text-lg">✉</span>
-                <a href="mailto:animeshpatra.dev@gmail.com" class="hover:text-neonBlue transition">animeshpatra.dev@gmail.com</a>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="text-neonPurple text-lg">🌐</span>
-                <a href="https://animeshpatra.me" target="_blank" rel="noopener noreferrer" class="hover:text-neonPurple transition">animeshpatra.me</a>
-              </div>
-            </div>
+
           </div>
 
           <!-- Formspree Contact Form -->
@@ -2132,11 +2319,11 @@
                 </button>
                 
                 <!-- Feedback messages -->
-                <div id="formSuccess" class="hidden mt-3 p-3.5 rounded-xl border border-green-500/20 bg-green-500/10 text-xs font-semibold text-green-400 text-center transition-all duration-300">
-                  ✓ Message sent successfully! We will contact you soon.
+                <div id="formSuccess" class="hidden mt-3 p-3.5 rounded-xl border border-green-500/30 bg-green-500/10 text-sm font-semibold text-green-400 text-center transition-all duration-300">
+                  ✓ Thank you! Your message has been sent successfully. We'll get back to you soon.
                 </div>
                 <div id="formError" class="hidden mt-3 p-3.5 rounded-xl border border-red-500/20 bg-red-500/10 text-xs font-semibold text-red-400 text-center transition-all duration-300">
-                  ✗ Failed to send message. Please try again.
+                  ❌ Failed to send message. Please email me directly at animeshpatra.dev@gmail.com.
                 </div>
               </div>
             </form>
@@ -2144,6 +2331,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="border-t border-white/10 bg-gradient-to-b from-transparent to-[#05070D]/30 px-6 py-12 lg:px-8">
@@ -2153,10 +2341,12 @@
         <!-- Brand Section -->
         <div class="flex flex-col gap-3">
           <div class="inline-flex items-center gap-2 w-fit">
-            <img src="images/main_logo.png" alt="NextLab logo" class="h-8 w-8 rounded-lg border border-white/20 object-cover" loading="lazy" decoding="async" />
+            <img src="images/main_logo.png" alt="NextLab logo"
+              class="h-8 w-8 rounded-lg border border-white/20 object-cover" loading="lazy" decoding="async" />
             <span class="font-display text-sm font-semibold text-white/90">NEXTLAB</span>
           </div>
-          <p class="text-xs leading-relaxed text-white/60">Premium AI & product engineering studio for innovators and scale-ups.</p>
+          <p class="text-xs leading-relaxed text-white/60">Premium AI & product engineering studio for innovators and
+            scale-ups.</p>
         </div>
 
         <!-- Quick Links -->
@@ -2174,10 +2364,14 @@
         <div class="flex flex-col gap-3">
           <p class="text-xs font-semibold uppercase tracking-[0.1em] text-white/80">Resources</p>
           <nav class="flex flex-col gap-2">
-            <a href="https://animeshpatra.me" class="text-sm text-white/65 transition hover:text-neonBlue">Main Portfolio</a>
-            <a href="https://animeshpatra.me/privacy" class="text-sm text-white/65 transition hover:text-neonBlue">Privacy Policy</a>
-            <a href="https://animeshpatra.me/terms" class="text-sm text-white/65 transition hover:text-neonBlue">Terms of Service</a>
-            <a href="#contact" class="text-sm text-white/65 transition hover:text-neonBlue">Contact</a>
+            <a href="https://animeshpatra.dev" class="text-sm text-white/65 transition hover:text-neonBlue">Main
+              Portfolio</a>
+            <a href="https://animeshpatra.dev/privacy"
+              class="text-sm text-white/65 transition hover:text-neonBlue">Privacy Policy</a>
+            <a href="https://animeshpatra.dev/terms" class="text-sm text-white/65 transition hover:text-neonBlue">Terms
+              of Service</a>
+            <a href="https://animeshpatra.dev/#contact"
+              class="text-sm text-white/65 transition hover:text-neonBlue">Contact</a>
           </nav>
         </div>
 
@@ -2185,7 +2379,8 @@
         <div class="flex flex-col gap-3">
           <p class="text-xs font-semibold uppercase tracking-[0.1em] text-white/80">Connect</p>
           <p class="text-sm text-white/65">
-            <a href="#contact" class="text-neonBlue transition hover:text-neonBlue/80">Get in touch</a> to discuss your next project.
+            <a href="https://animeshpatra.dev/#contact" class="text-neonBlue transition hover:text-neonBlue/80">Get in
+              touch</a> to discuss your next project.
           </p>
           <p class="text-xs text-white/50">Email: animeshpatra.dev@gmail.com</p>
         </div>
@@ -2202,7 +2397,7 @@
           <p>Engineered with ❤️ and cutting-edge technology</p>
         </div>
         <div class="flex items-center gap-4">
-          <a href="https://animeshpatra.me" class="transition hover:text-white">Main Site</a>
+          <a href="https://animeshpatra.dev" class="transition hover:text-white">Main Site</a>
           <span class="text-white/30">•</span>
           <a href="#top" class="transition hover:text-white">Back to Top</a>
         </div>
@@ -2214,8 +2409,7 @@
     (() => {
       const root = document.documentElement;
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      // Observe both .reveal and [data-reveal] elements
-      const revealEls = Array.from(document.querySelectorAll(".reveal, [data-reveal]"));
+      const revealEls = Array.from(document.querySelectorAll(".reveal"));
       const markAbove = () => {
         const fold = window.innerHeight * 1.05;
         revealEls.forEach((el) => {
@@ -2225,121 +2419,40 @@
       };
 
       try {
+        markAbove();
         root.classList.add("js");
         if (reduceMotion) {
           revealEls.forEach((el) => el.classList.add("active", "is-visible"));
+        } else if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active", "is-visible");
+                io.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.05 });
+          revealEls.forEach((el) => io.observe(el));
+          window.addEventListener("resize", markAbove, { passive: true });
         } else {
-          setTimeout(() => {
-            if ("IntersectionObserver" in window) {
-              const io = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    const el = entry.target;
-                    // Set will-change only during animation, clean up after
-                    el.style.willChange = 'opacity, transform';
-                    el.classList.add("active", "is-visible");
-                    el.addEventListener('transitionend', () => {
-                      el.style.willChange = 'auto';
-                    }, { once: true });
-                    io.unobserve(el);
-                  }
-                });
-              }, { 
-                threshold: 0.15,
-                rootMargin: "0px 0px -40px 0px"
-              });
-              revealEls.forEach((el) => io.observe(el));
-              window.addEventListener("resize", markAbove, { passive: true });
-            } else {
-              revealEls.forEach((el) => el.classList.add("active", "is-visible"));
-            }
-            markAbove();
-          }, 50);
+          revealEls.forEach((el) => el.classList.add("active", "is-visible"));
         }
       } catch (err) {
         root.classList.remove("js");
         revealEls.forEach((el) => el.classList.add("active", "is-visible"));
       }
 
-      // Safety fallback: reduced to 1.5s — animations are fast enough
+      // Safety fallback: reveal any still-hidden content after a generous delay
+      // Uses 3s so scroll animations have time to fire naturally first
       setTimeout(() => {
         revealEls.forEach((el) => {
           if (!el.classList.contains('active')) {
             el.classList.add('active', 'is-visible');
           }
         });
-      }, 1500);
+      }, 3000);
 
-      // ========== LOGO HOME NAVIGATION ==========
-      const logoLink = document.getElementById('logoHomeLink');
-      if (logoLink) {
-        logoLink.addEventListener('click', (e) => {
-          // Robustly check if we are on the homepage by looking for the hero section
-          const heroSection = document.querySelector('section.relative.px-6'); // The first section
-          const isHomePage = !!document.getElementById('products'); // Or just checking for #products
-          
-          if (isHomePage) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          } else {
-            // Navigate home relative to current path
-            e.preventDefault();
-            window.location.href = 'index.html';
-          }
-        });
-      }
 
-      // ========== TYPEWRITER ANIMATION ==========
-      const initTypewriter = () => {
-        const el = document.getElementById("typing-text");
-        const cur = document.getElementById("typing-cursor");
-        if (!el || !cur) return;
-        const speed = window.innerWidth < 640 ? 30 : 42;
-        const steps = [
-          "AI Products",
-          "SaaS Platforms",
-          "Startup Solutions",
-          "Automation Systems",
-          "Cyber Security"
-        ];
-        let si = 0, ci = 0;
-        const go = () => {
-          if (si >= steps.length) {
-             // Stop completely after all words
-             cur.style.display = 'none';
-             return;
-          }
-          const txt = steps[si];
-          const type = () => {
-            if (ci < txt.length) {
-              el.textContent += txt[ci++];
-              setTimeout(type, speed);
-            } else {
-              // Once word is typed, if it's the last word, stop. Otherwise erase and do next.
-              if (si === steps.length - 1) {
-                setTimeout(() => {
-                  cur.style.display = 'none';
-                }, 1200);
-                return;
-              }
-              setTimeout(() => {
-                setTimeout(() => {
-                  el.textContent = "";
-                  ci = 0;
-                  si++;
-                  go();
-                }, 450);
-              }, 1200);
-            }
-          };
-          type();
-        };
-        el.textContent = "";
-        go();
-      };
-      initTypewriter();
-
-      // ========== COUNTER STATS ANIMATION ==========
       const animateCount = (el, start, end, duration, decimals = 0) => {
         let startTimestamp = null;
         const suffix = el.getAttribute("data-suffix") || "";
@@ -2480,15 +2593,15 @@
           mockup.setAttribute("role", "region");
           mockup.setAttribute("aria-label", "Kashandaz Screenshots");
           mockup.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowRight") { 
-              e.preventDefault(); 
+            if (e.key === "ArrowRight") {
+              e.preventDefault();
               e.stopPropagation();
-              updateSlider(currentIndex + 1); 
+              updateSlider(currentIndex + 1);
             }
-            else if (e.key === "ArrowLeft") { 
-              e.preventDefault(); 
+            else if (e.key === "ArrowLeft") {
+              e.preventDefault();
               e.stopPropagation();
-              updateSlider(currentIndex - 1); 
+              updateSlider(currentIndex - 1);
             }
           });
         }
@@ -2512,154 +2625,123 @@
       const initFaqAccordions = () => {
         const triggers = document.querySelectorAll(".faq-trigger");
         triggers.forEach((trigger) => {
-          const toggle = () => {
-            const item = trigger.closest(".faq-item");
-            const isActive = item.classList.contains("faq-open");
-
-            // Close other items
-            document.querySelectorAll(".faq-item").forEach((el) => {
-              if (el !== item) {
-                el.classList.remove("faq-open");
-                const otherTrigger = el.querySelector(".faq-trigger");
-                if (otherTrigger) {
-                  otherTrigger.setAttribute("aria-expanded", "false");
-                  otherTrigger.querySelector(".faq-icon").textContent = "+";
-                }
-              }
-            });
-
-            // Toggle current item
-            const willBeActive = !isActive;
-            item.classList.toggle("faq-open", willBeActive);
-            trigger.setAttribute("aria-expanded", willBeActive ? "true" : "false");
-            trigger.querySelector(".faq-icon").textContent = willBeActive ? "−" : "+";
-          };
-
           trigger.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
-            toggle();
-          });
+            const item = trigger.closest(".faq-item");
+            const isActive = item.classList.contains("active");
 
-          trigger.addEventListener("keydown", (e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              e.stopPropagation();
-              toggle();
-            }
+            // Close other items
+            document.querySelectorAll(".faq-item").forEach((el) => {
+              if (el !== item) el.classList.remove("active");
+            });
+
+            item.classList.toggle("active", !isActive);
           });
         });
       };
       initFaqAccordions();
 
-      // ========== MOBILE NAVIGATION MENU ==========
-      const initMobileMenu = () => {
-        const btn = document.getElementById("mobileMenuBtn");
-        const menu = document.getElementById("mobileMenu");
-        if (!btn || !menu) return;
-
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          const isHidden = menu.classList.contains("hidden");
-          if (isHidden) {
-            menu.classList.remove("hidden");
-            btn.querySelector("span").textContent = "✕";
-            btn.setAttribute("aria-expanded", "true");
-          } else {
-            menu.classList.add("hidden");
-            btn.querySelector("span").textContent = "☰";
-            btn.setAttribute("aria-expanded", "false");
-          }
-        });
-
-        // Close on link click
-        menu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            menu.classList.add("hidden");
-            btn.querySelector("span").textContent = "☰";
-            btn.setAttribute("aria-expanded", "false");
-          });
-        });
-
-        // Close on click outside
-        document.addEventListener("click", (e) => {
-          if (!menu.classList.contains("hidden") && !menu.contains(e.target) && !btn.contains(e.target)) {
-            menu.classList.add("hidden");
-            btn.querySelector("span").textContent = "☰";
-            btn.setAttribute("aria-expanded", "false");
-          }
-        });
+      // ========== HERO WORD SWAP ANIMATION ==========
+      const initHeroWordSwap = () => {
+        const el = document.getElementById("hero-word");
+        if (!el) return;
+        const words = [
+          "AI Products",
+          "SaaS Platforms",
+          "Startup Solutions",
+          "Automation Systems",
+          "Cyber Security"
+        ];
+        let idx = 0;
+        setInterval(() => {
+          // Fade out and slide up
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(-15px)';
+          
+          setTimeout(() => {
+            idx = (idx + 1) % words.length;
+            el.textContent = words[idx];
+            
+            // Prepare to enter from bottom
+            el.style.transition = 'none';
+            el.style.transform = 'translateY(15px)';
+            
+            // Trigger reflow
+            void el.offsetWidth;
+            
+            // Fade in and slide to center
+            el.style.transition = 'all 0.5s cubic-bezier(0.22, 1, 0.36, 1)';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }, 500);
+        }, 3500);
       };
-      initMobileMenu();
+      initHeroWordSwap();
 
-      // ========== CONTACT FORM INTEGRATION ==========
+      // ========== CONTACT FORM SUBMISSION ==========
       const initContactForm = () => {
         const form = document.getElementById("contactForm");
         const submitBtn = document.getElementById("formSubmitBtn");
         const submitText = document.getElementById("formSubmitText");
-        const submitSpinner = document.getElementById("formSubmitSpinner");
-        const successAlert = document.getElementById("formSuccess");
-        const errorAlert = document.getElementById("formError");
+        const spinner = document.getElementById("formSubmitSpinner");
+        const successMsg = document.getElementById("formSuccess");
+        const errorMsg = document.getElementById("formError");
 
-        if (!form || !submitBtn) return;
+        if (!form) return;
 
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
-
-          // Hide alerts
-          successAlert.classList.add("hidden");
-          errorAlert.classList.add("hidden");
-
-          // Loading state
+          
+          // UI Loading state
           submitBtn.disabled = true;
-          submitSpinner.classList.remove("hidden");
           submitText.textContent = "Sending...";
+          spinner.classList.remove("hidden");
+          successMsg.classList.add("hidden");
+          errorMsg.classList.add("hidden");
 
           try {
-            const data = {
-              name: document.getElementById("form-name").value,
-              email: document.getElementById("form-email").value,
-              company: document.getElementById("form-company").value,
-              subject: document.getElementById("form-subject").value,
-              message: document.getElementById("form-message").value
-            };
-
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
             const response = await fetch(form.action, {
-              method: form.method,
+              method: "POST",
               body: JSON.stringify(data),
               headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-              }
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+              },
             });
 
-            const responseText = await response.text();
-            console.log("Formspree Response Status:", response.status);
-            console.log("Formspree Response Body:", responseText);
-
             if (response.ok) {
-              // Success
-              successAlert.classList.remove("hidden");
+              successMsg.classList.remove("hidden");
               form.reset();
             } else {
-              // Server error
-              errorAlert.classList.remove("hidden");
+              try {
+                const resData = await response.json();
+                if (resData.errors && resData.errors.length > 0) {
+                  errorMsg.innerHTML = "❌ " + resData.errors.map(e => e.message).join(", ");
+                } else {
+                  errorMsg.innerHTML = "❌ Failed to send message. Please try again.";
+                }
+              } catch(e) {
+                 errorMsg.innerHTML = "❌ Failed to send message. Please try again.";
+              }
+              errorMsg.classList.remove("hidden");
             }
           } catch (err) {
-            console.error("Formspree Submission Error:", err);
-            // Network error
-            errorAlert.classList.remove("hidden");
+            errorMsg.innerHTML = "❌ Network error. Please try again.";
+            errorMsg.classList.remove("hidden");
           } finally {
-            // Reset state
             submitBtn.disabled = false;
-            submitSpinner.classList.add("hidden");
             submitText.textContent = "Send Message";
+            spinner.classList.add("hidden");
           }
         });
       };
       initContactForm();
+
     })();
   </script>
 </body>
+
 </html>
