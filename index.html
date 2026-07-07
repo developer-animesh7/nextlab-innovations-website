@@ -158,51 +158,65 @@
     }
 
     /* === REVEAL ANIMATION SYSTEM === */
+    /* Base hidden state — translate3d forces GPU layer */
     .reveal,
     [data-reveal="fade-up"] {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translate3d(0, 22px, 0);
+      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
     [data-reveal="fade-left"] {
       opacity: 0;
-      transform: translateX(-30px);
-      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translate3d(-22px, 0, 0);
+      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
     [data-reveal="fade-right"] {
       opacity: 0;
-      transform: translateX(30px);
-      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translate3d(22px, 0, 0);
+      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
     [data-reveal="fade-in"] {
       opacity: 0;
       transform: none;
-      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
+
+    /* Active state — no !important, clean specificity */
     .reveal.active,
     [data-reveal].active {
-      opacity: 1 !important;
-      transform: translate(0, 0) !important;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
 
-    /* Stagger reveal animations matching main site */
-    .grid > .reveal:nth-child(1), .space-y-12 > .reveal:nth-child(1) { transition-delay: 0ms; }
-    .grid > .reveal:nth-child(2), .space-y-12 > .reveal:nth-child(2) { transition-delay: 50ms; }
-    .grid > .reveal:nth-child(3), .space-y-12 > .reveal:nth-child(3) { transition-delay: 100ms; }
-    .grid > .reveal:nth-child(4), .space-y-12 > .reveal:nth-child(4) { transition-delay: 150ms; }
-    .grid > .reveal:nth-child(5), .space-y-12 > .reveal:nth-child(5) { transition-delay: 200ms; }
-    .grid > .reveal:nth-child(6), .space-y-12 > .reveal:nth-child(6) { transition-delay: 250ms; }
+    /* Hero sequence stagger */
+    .hero-badge.reveal  { transition-delay: 0ms; }
+    .hero-headline.reveal { transition-delay: 70ms; }
+    .hero-desc.reveal   { transition-delay: 150ms; }
+    .hero-btns.reveal   { transition-delay: 230ms; }
+    .hero-trust.reveal  { transition-delay: 310ms; }
 
-    /* Hero Text Sequential Timeline */
-    .hero-badge.reveal { transition-delay: 0ms; }
-    .hero-headline.reveal { transition-delay: 80ms; }
-    .hero-desc.reveal { transition-delay: 160ms; }
-    .hero-btns.reveal { transition-delay: 240ms; }
-    .hero-trust.reveal { transition-delay: 320ms; }
+    /* Grid / section card stagger (covers both .reveal and [data-reveal]) */
+    .grid > .reveal:nth-child(1),  .grid > [data-reveal]:nth-child(1)  { transition-delay: 0ms; }
+    .grid > .reveal:nth-child(2),  .grid > [data-reveal]:nth-child(2)  { transition-delay: 60ms; }
+    .grid > .reveal:nth-child(3),  .grid > [data-reveal]:nth-child(3)  { transition-delay: 120ms; }
+    .grid > .reveal:nth-child(4),  .grid > [data-reveal]:nth-child(4)  { transition-delay: 180ms; }
+    .grid > .reveal:nth-child(5),  .grid > [data-reveal]:nth-child(5)  { transition-delay: 240ms; }
+    .grid > .reveal:nth-child(6),  .grid > [data-reveal]:nth-child(6)  { transition-delay: 300ms; }
+    .space-y-12 > .reveal:nth-child(1) { transition-delay: 0ms; }
+    .space-y-12 > .reveal:nth-child(2) { transition-delay: 60ms; }
+    .space-y-12 > .reveal:nth-child(3) { transition-delay: 120ms; }
+    .space-y-12 > .reveal:nth-child(4) { transition-delay: 180ms; }
 
     /* Progress Bar Entry Animations */
     .progress-bar-1, .progress-bar-2, .progress-bar-3 {
@@ -718,8 +732,12 @@
         align-items: center;
       }
 
-      .reveal {
-        animation: none !important;
+      /* Mobile: lighter, faster animations to prevent jank */
+      .reveal,
+      [data-reveal="fade-up"] {
+        transform: translate3d(0, 14px, 0);
+        transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       /* Hero Section Mobile */
@@ -791,21 +809,23 @@
         transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       [data-reveal="fade-left"] {
-        transform: translateX(-15px);
-        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+        transform: translate3d(-14px, 0, 0);
+        transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       [data-reveal="fade-right"] {
-        transform: translateX(15px);
-        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+        transform: translate3d(14px, 0, 0);
+        transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       [data-reveal="fade-in"] {
-        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1);
+        transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1);
       }
     }
 
     @media (min-width: 641px) and (max-width: 1024px) {
       .reveal, [data-reveal] {
-        transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+        transition-duration: 580ms;
       }
     }
 
@@ -1014,23 +1034,37 @@
       height: 100%;
     }
 
+    /* All slides stacked on top of each other, all visible by default */
     .phone-slide {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
+      /* Default: hidden underneath */
       opacity: 0;
-      transform: translateX(10px);
-      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-      will-change: opacity, transform;
+      z-index: 0;
       pointer-events: none;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
 
-    .phone-slide.active {
+    /* The active (current) slide sits on top, fully visible, no transition needed */
+    .phone-slide.slide-current {
       opacity: 1;
-      transform: translateX(0);
+      z-index: 2;
       pointer-events: auto;
+      transition: none;
+    }
+
+    /* The incoming slide fades IN on top of the current */
+    .phone-slide.slide-entering {
+      opacity: 0;
+      z-index: 3;
+      pointer-events: none;
+      will-change: opacity;
+      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .phone-slide.slide-entering.slide-visible {
+      opacity: 1;
     }
 
     .phone-slide img {
@@ -1070,11 +1104,13 @@
     .phone-arrow {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
+      /* Use a CSS variable for the base transform so hover/active don't conflict */
+      --arrow-translate: translateY(-50%);
+      transform: var(--arrow-translate);
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.88);
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: #fff;
       display: flex;
@@ -1082,16 +1118,33 @@
       justify-content: center;
       cursor: pointer;
       z-index: 101;
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: background-color 0.18s ease,
+                  border-color 0.18s ease,
+                  box-shadow 0.18s ease,
+                  transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35);
       font-size: 18px;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
     }
 
     .phone-arrow:hover {
-      background: rgba(30, 41, 59, 0.95);
-      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(30, 41, 59, 0.96);
+      border-color: rgba(255, 255, 255, 0.38);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+      transform: translateY(-50%) scale(1.06);
+    }
+
+    .phone-arrow:active {
+      transform: translateY(-50%) scale(0.93);
+      background: rgba(10, 108, 255, 0.25);
+      border-color: rgba(10, 108, 255, 0.5);
+    }
+
+    .phone-arrow[disabled] {
+      opacity: 0.45;
+      cursor: not-allowed;
       transform: translateY(-50%);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
     }
 
     .phone-arrow--left {
@@ -1270,7 +1323,7 @@
   </div>
 
   <main>
-    <section class="relative px-6 pb-20 pt-16 md:pb-32 md:pt-28 lg:px-8">
+    <section class="relative px-6 pb-20 pt-20 md:pb-32 md:pt-28 lg:px-8">
       <div class="mx-auto grid w-full max-w-6xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <!-- Left Side: Core Startup Copy & CTA -->
         <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -1457,10 +1510,10 @@
                   <div class="phone-notch" style="width: 50px; height: 14px; border-radius: 7px; top: 6px;"></div>
                   <div class="phone-screen">
                     <div class="phone-slider" id="labsKashandazSlider">
-                      <div class="phone-slide"><img src="images/home_screen.webp" alt="Kashandaz Home Screen" loading="lazy" decoding="async" /></div>
-                      <div class="phone-slide"><img src="images/wallet_screen.webp" alt="Kashandaz Wallet Screen" loading="lazy" decoding="async" /></div>
-                      <div class="phone-slide"><img src="images/activate_cashback_store.webp" alt="Kashandaz Store Activation" loading="lazy" decoding="async" /></div>
-                      <div class="phone-slide"><img src="images/stores.webp" alt="Kashandaz Merchant Stores" loading="lazy" decoding="async" /></div>
+                      <div class="phone-slide"><img src="images/home_screen.webp" alt="Kashandaz Home Screen" loading="eager" decoding="async" /></div>
+                      <div class="phone-slide"><img src="images/wallet_screen.webp" alt="Kashandaz Wallet Screen" loading="eager" decoding="async" /></div>
+                      <div class="phone-slide"><img src="images/activate_cashback_store.webp" alt="Kashandaz Store Activation" loading="eager" decoding="async" /></div>
+                      <div class="phone-slide"><img src="images/stores.webp" alt="Kashandaz Merchant Stores" loading="eager" decoding="async" /></div>
                     </div>
                     <div class="phone-controls" id="labsSliderDots" role="tablist" aria-label="Screenshot navigation" style="bottom: 10px; gap: 5px;">
                       <span class="phone-dot active" data-index="0" role="tab" style="width: 6px; height: 6px;"></span>
@@ -1506,6 +1559,24 @@
                 <div class="flex items-center gap-2 text-xs font-semibold text-white/80">
                   <span class="text-neonBlue">★</span> 4.8 Rating (Loved by Thousands)
                 </div>
+              </div>
+
+              <!-- Chrome Web Store CTA -->
+              <div class="mt-6">
+                <a href="https://chromewebstore.google.com/detail/pdjebhcifgoembcidgjhdjohnkgcbflb?utm_source=item-share-cb"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center gap-2.5 w-full rounded-[18px] bg-gradient-to-r from-neonBlue to-neonPurple px-6 py-3 text-xs font-bold text-white shadow-glow hover:shadow-[0_0_20px_rgba(77,124,254,0.4)] transition duration-300 hover:translate-y-[-2px] active:scale-[0.98]">
+                  <!-- Chrome icon SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="width:15px;height:15px;flex-shrink:0;" aria-hidden="true">
+                    <circle cx="24" cy="24" r="10" fill="#fff"/>
+                    <path fill="#EA4335" d="M24 14h14.6A20 20 0 0 0 24 4v10z"/>
+                    <path fill="#FBBC05" d="M9.4 38l7.3-12.7A10 10 0 0 1 14 24H4a20 20 0 0 0 5.4 14z"/>
+                    <path fill="#34A853" d="M24 34a10 10 0 0 1-7.3-3.3L9.4 38A20 20 0 0 0 44 24h-10a10 10 0 0 1-10 10z"/>
+                    <path fill="#4285F4" d="M38.6 14H24v10h10a10 10 0 0 1-3.7 7.7l7.3 12.6A20 20 0 0 0 44 24a20 20 0 0 0-5.4-10z"/>
+                  </svg>
+                  <span>Install from Chrome Web Store</span>
+                </a>
               </div>
             </div>
             <!-- Graphic Preview Frame -->
@@ -2214,61 +2285,59 @@
     (() => {
       const root = document.documentElement;
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      // Observe both .reveal and [data-reveal] elements
-      const revealEls = Array.from(document.querySelectorAll(".reveal, [data-reveal]"));
-      const markAbove = () => {
-        const fold = window.innerHeight * 1.05;
-        revealEls.forEach((el) => {
-          const r = el.getBoundingClientRect();
-          if (r.bottom >= 0 && r.top <= fold) el.classList.add("active", "is-visible");
-        });
-      };
+      // ========== SCROLL REVEAL SYSTEM ==========
+      const revealEls = Array.from(document.querySelectorAll('.reveal, [data-reveal]'));
 
-      try {
-        root.classList.add("js");
-        if (reduceMotion) {
-          revealEls.forEach((el) => el.classList.add("active", "is-visible"));
-        } else {
-          setTimeout(() => {
-            if ("IntersectionObserver" in window) {
-              const io = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    const el = entry.target;
-                    // Set will-change only during animation, clean up after
-                    el.style.willChange = 'opacity, transform';
-                    el.classList.add("active", "is-visible");
-                    el.addEventListener('transitionend', () => {
-                      el.style.willChange = 'auto';
-                    }, { once: true });
-                    io.unobserve(el);
-                  }
-                });
-              }, { 
-                threshold: 0.15,
-                rootMargin: "0px 0px -40px 0px"
-              });
-              revealEls.forEach((el) => io.observe(el));
-              window.addEventListener("resize", markAbove, { passive: true });
-            } else {
-              revealEls.forEach((el) => el.classList.add("active", "is-visible"));
+      if (reduceMotion) {
+        // Accessibility: skip all animations instantly
+        revealEls.forEach(el => {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+          el.style.transition = 'none';
+        });
+      } else {
+        // Mark any elements already in view on page load (above the fold)
+        const markVisible = () => {
+          const vh = window.innerHeight;
+          revealEls.forEach(el => {
+            if (el.classList.contains('active')) return;
+            const r = el.getBoundingClientRect();
+            if (r.top < vh && r.bottom > 0) {
+              el.classList.add('active');
             }
-            markAbove();
-          }, 50);
+          });
+        };
+
+        if ('IntersectionObserver' in window) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting || entry.target.classList.contains('active')) return;
+              const el = entry.target;
+              // Apply will-change only during active animation to leverage GPU composite
+              el.style.willChange = 'opacity, transform';
+              el.classList.add('active');
+              // Clean up GPU hint after animation finishes
+              el.addEventListener('transitionend', () => {
+                el.style.willChange = 'auto';
+              }, { once: true });
+              io.unobserve(el);
+            });
+          }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -32px 0px'
+          });
+
+          revealEls.forEach(el => io.observe(el));
+        } else {
+          // Fallback for browsers without IntersectionObserver
+          revealEls.forEach(el => el.classList.add('active'));
         }
-      } catch (err) {
-        root.classList.remove("js");
-        revealEls.forEach((el) => el.classList.add("active", "is-visible"));
+
+        // Mark anything already visible on load (e.g. hero)
+        markVisible();
+        window.addEventListener('resize', markVisible, { passive: true });
       }
 
-      // Safety fallback: reduced to 1.5s — animations are fast enough
-      setTimeout(() => {
-        revealEls.forEach((el) => {
-          if (!el.classList.contains('active')) {
-            el.classList.add('active', 'is-visible');
-          }
-        });
-      }, 1500);
 
       // ========== LOGO HOME NAVIGATION ==========
       const logoLink = document.getElementById('logoHomeLink');
@@ -2299,7 +2368,7 @@
           "AI Products",
           "SaaS Platforms",
           "Startup Solutions",
-          "Automation Systems",
+          "Automation",
           "Cyber Security"
         ];
         let si = 0, ci = 0;
@@ -2421,88 +2490,105 @@
 
       // ========== LABS KASHANDAZ CAROUSEL ==========
       const initLabsSlider = () => {
-        const slider = document.getElementById("labsKashandazSlider");
+        const sliderContainer = document.getElementById("labsKashandazSlider");
         const nextBtn = document.getElementById("labsSliderNext");
         const prevBtn = document.getElementById("labsSliderPrev");
         const dots = document.querySelectorAll("#labsSliderDots .phone-dot");
-        const slides = slider ? slider.querySelectorAll(".phone-slide") : [];
-        if (!slider || dots.length === 0 || slides.length === 0) return;
+        const slides = sliderContainer ? Array.from(sliderContainer.querySelectorAll(".phone-slide")) : [];
+        if (!sliderContainer || slides.length === 0) return;
 
+        const TRANSITION_MS = 420;
         let currentIndex = 0;
-        const totalSlides = dots.length;
+        let isAnimating = false;
 
-        // Initialize first slide
-        slides.forEach((slide, idx) => {
-          if(idx === currentIndex) slide.classList.add('active');
-          else slide.classList.remove('active');
+        // --- Force all images to load eagerly (override lazy) ---
+        slides.forEach(slide => {
+          const img = slide.querySelector('img');
+          if (img) {
+            img.loading = 'eager';
+            // Force decode
+            if (img.decode) img.decode().catch(() => {});
+          }
         });
 
-        const updateSlider = (index) => {
-          const targetIndex = (index + totalSlides) % totalSlides;
-          if (targetIndex === currentIndex) return;
+        // --- Set initial state: only first slide visible ---
+        slides[0].classList.add('slide-current');
+        dots[0] && dots[0].classList.add('active');
 
-          slides[currentIndex].classList.remove('active');
-          currentIndex = targetIndex;
-          slides[currentIndex].classList.add('active');
-          
-          dots.forEach((dot, idx) => {
-            dot.classList.toggle("active", idx === currentIndex);
+        const lockBtns  = () => { if (nextBtn) nextBtn.disabled = true;  if (prevBtn) prevBtn.disabled = true; };
+        const unlockBtns = () => { if (nextBtn) nextBtn.disabled = false; if (prevBtn) prevBtn.disabled = false; };
+
+        const goTo = (targetIdx) => {
+          if (isAnimating) return;
+          targetIdx = ((targetIdx % slides.length) + slides.length) % slides.length;
+          if (targetIdx === currentIndex) return;
+
+          isAnimating = true;
+          lockBtns();
+
+          const currentSlide = slides[currentIndex];
+          const nextSlide   = slides[targetIdx];
+
+          // STEP 1: Stage the incoming slide as invisible but on top (z:3)
+          //         The current slide stays at z:2, opacity:1 — always visible
+          nextSlide.classList.remove('slide-current', 'slide-entering', 'slide-visible');
+          nextSlide.classList.add('slide-entering');   // opacity:0, z-index:3, no transition yet
+
+          // STEP 2: After one frame, trigger the fade-in
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              // Add transition class — now opacity animates 0→1
+              nextSlide.classList.add('slide-visible');
+
+              // STEP 3: After animation completes, clean up
+              setTimeout(() => {
+                // Promote incoming to current
+                nextSlide.classList.remove('slide-entering', 'slide-visible');
+                nextSlide.classList.add('slide-current');
+
+                // Demote outgoing slide
+                currentSlide.classList.remove('slide-current');
+
+                // Update dots
+                dots[currentIndex] && dots[currentIndex].classList.remove('active');
+                currentIndex = targetIdx;
+                dots[currentIndex] && dots[currentIndex].classList.add('active');
+
+                isAnimating = false;
+                unlockBtns();
+              }, TRANSITION_MS);
+            });
           });
         };
 
-        if (nextBtn) {
-          nextBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            updateSlider(currentIndex + 1);
-          });
-        }
-        if (prevBtn) {
-          prevBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            updateSlider(currentIndex - 1);
-          });
-        }
+        // --- Controls ---
+        if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); goTo(currentIndex + 1); });
+        if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); goTo(currentIndex - 1); });
+        dots.forEach((dot, idx) => dot.addEventListener('click', (e) => { e.preventDefault(); goTo(idx); }));
 
-        dots.forEach((dot, idx) => {
-          dot.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            updateSlider(idx);
-          });
-        });
-
-        // Keyboard navigation
-        const mockup = slider.closest(".phone-mockup");
-        if (mockup) {
-          mockup.setAttribute("tabindex", "0");
-          mockup.setAttribute("role", "region");
-          mockup.setAttribute("aria-label", "Kashandaz Screenshots");
-          mockup.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowRight") { 
-              e.preventDefault(); 
-              e.stopPropagation();
-              updateSlider(currentIndex + 1); 
-            }
-            else if (e.key === "ArrowLeft") { 
-              e.preventDefault(); 
-              e.stopPropagation();
-              updateSlider(currentIndex - 1); 
-            }
+        // --- Keyboard ---
+        const mockupEl = sliderContainer.closest('.phone-mockup');
+        if (mockupEl) {
+          mockupEl.setAttribute('tabindex', '0');
+          mockupEl.setAttribute('role', 'region');
+          mockupEl.setAttribute('aria-label', 'Kashandaz Screenshots');
+          mockupEl.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') { e.preventDefault(); goTo(currentIndex + 1); }
+            else if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(currentIndex - 1); }
           });
         }
 
-        // Touch swipe
-        let touchStartX = 0;
-        slider.addEventListener("touchstart", (e) => {
-          touchStartX = e.changedTouches[0].screenX;
+        // --- Touch swipe ---
+        let touchStartX = 0, touchStartY = 0;
+        sliderContainer.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].clientX;
+          touchStartY = e.changedTouches[0].clientY;
         }, { passive: true });
-
-        slider.addEventListener("touchend", (e) => {
-          const diff = e.changedTouches[0].screenX - touchStartX;
-          if (Math.abs(diff) > 30) {
-            updateSlider(currentIndex + (diff < 0 ? 1 : -1));
+        sliderContainer.addEventListener('touchend', (e) => {
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          const dy = e.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy)) {
+            goTo(currentIndex + (dx < 0 ? 1 : -1));
           }
         }, { passive: true });
       };
