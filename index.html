@@ -157,17 +157,35 @@
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
+    /* === REVEAL ANIMATION SYSTEM === */
     .reveal {
       opacity: 0;
-      transform: translateY(24px) !important;
-      transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1) !important;
-      will-change: transform, opacity;
+      transform: translateY(24px);
+      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
     }
-
-    .reveal.active {
+    [data-reveal="fade-left"] {
+      opacity: 0;
+      transform: translateX(-24px);
+      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      backface-visibility: hidden;
+    }
+    [data-reveal="fade-right"] {
+      opacity: 0;
+      transform: translateX(24px);
+      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      backface-visibility: hidden;
+    }
+    [data-reveal="fade-in"] {
+      opacity: 0;
+      transform: none;
+      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      backface-visibility: hidden;
+    }
+    .reveal.active,
+    [data-reveal].active {
       opacity: 1 !important;
-      transform: translateY(0) !important;
+      transform: translate(0, 0) !important;
     }
 
     /* Stagger reveal animations matching main site */
@@ -203,40 +221,35 @@
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Hover states for desktop only */
+    /* Hover states for desktop only — premium subtle */
     @media (hover: hover) and (min-width: 1025px) {
       .glass:hover {
-        transform: translateY(-4px) scale(1.008);
-        border-color: rgba(77, 124, 254, 0.35);
-        box-shadow: 0 20px 40px -12px rgba(3, 8, 23, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.16);
+        transform: translateY(-3px);
+        border-color: rgba(77, 124, 254, 0.30);
+        box-shadow: 0 16px 36px -10px rgba(3, 8, 23, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.13);
       }
       [data-theme="light"] .glass:hover {
         background: rgba(255, 255, 255, 0.92);
-        border-color: rgba(37, 99, 235, 0.4);
-        box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        border-color: rgba(37, 99, 235, 0.35);
+        box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.9);
       }
       .hover-glow:hover {
-        transform: translateY(-4px) scale(1.008);
-        border-color: rgba(154, 92, 255, 0.4);
-        box-shadow: 0 16px 36px -8px rgba(154, 92, 255, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.16);
+        transform: translateY(-3px);
+        border-color: rgba(154, 92, 255, 0.35);
+        box-shadow: 0 12px 28px -8px rgba(154, 92, 255, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.13);
       }
       .stat-card:hover {
-        transform: translateY(-5px) scale(1.01);
-        border-color: rgba(77, 124, 254, 0.35);
-        box-shadow: 0 16px 32px -8px rgba(77, 124, 254, 0.2);
+        transform: translateY(-4px);
+        border-color: rgba(77, 124, 254, 0.30);
+        box-shadow: 0 12px 28px -8px rgba(77, 124, 254, 0.18);
       }
       [data-theme="light"] .stat-card:hover {
         background: rgba(255, 255, 255, 0.92);
-        border-color: rgba(37, 99, 235, 0.45);
-        box-shadow: 0 16px 32px -8px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        border-color: rgba(37, 99, 235, 0.40);
+        box-shadow: 0 12px 28px -8px rgba(37, 99, 235, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.9);
       }
       .rounded-btn:hover, a.rounded-\[18px\]:hover, a.rounded-btn:hover {
-        transform: translateY(-2px) scale(1.02);
-      }
-      /* Smooth icon transitions inside buttons */
-      a:hover svg, button:hover svg {
-        transform: scale(1.08);
-        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: translateY(-2px);
       }
     }
 
@@ -770,21 +783,24 @@
         animation: none !important;
       }
 
+      /* Mobile: lighter animation distance for performance */
       .reveal {
-        transform: translateY(6px) !important;
-        transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1), transform 300ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+        transform: translateY(10px);
+        transition: opacity 350ms cubic-bezier(0.22, 1, 0.36, 1), transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
       }
-
-      /* Safe Touch Targets */
-      a, button {
-        padding: 0.5rem 1rem;
+      [data-reveal="fade-left"] {
+        transform: translateX(-10px);
+        transition: opacity 350ms cubic-bezier(0.22, 1, 0.36, 1), transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      [data-reveal="fade-right"] {
+        transform: translateX(10px);
+        transition: opacity 350ms cubic-bezier(0.22, 1, 0.36, 1), transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
       }
     }
 
     @media (min-width: 641px) and (max-width: 1024px) {
-      .reveal {
-        transform: translateY(12px) !important;
-        transition: opacity 450ms cubic-bezier(0.16, 1, 0.3, 1), transform 450ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+      .reveal, [data-reveal="fade-left"], [data-reveal="fade-right"] {
+        transition: opacity 480ms cubic-bezier(0.22, 1, 0.36, 1), transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
       }
     }
 
@@ -812,24 +828,18 @@
       }
     }
 
-    /* ========== PERFORMANCE OPTIMIZATIONS ========== */
-    /* Optimize animations for lower-end devices */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
 
-    /* GPU Acceleration for smooth scrolling */
-    /* NOTE: .reveal is intentionally excluded here to avoid overriding its translateY animation */
-    .glass,
-    .theme-toggle,
-    button,
-    a {
-      transform: translateZ(0);
-      will-change: auto;
+
+
+    /* GPU Acceleration — only for elements that animate */
+    .phone-slider,
+    .phone-mockup {
+      will-change: transform;
+    }
+    /* Touch scrolling optimization for mobile */
+    body {
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
     }
 
     body {
@@ -872,14 +882,15 @@
 
 
 
+    /* Consolidated reduced-motion — single block */
     @media (prefers-reduced-motion: reduce) {
-      * {
+      *,
+      .reveal,
+      [data-reveal] {
         animation: none !important;
         transition: none !important;
-      }
-      .reveal {
-        opacity: 1;
-        transform: none;
+        opacity: 1 !important;
+        transform: none !important;
       }
     }
 
@@ -1145,15 +1156,66 @@
     [data-theme="light"] .faq-item {
       border-color: rgba(15, 23, 42, 0.08);
     }
+
+    /* ===== TECH STACK CHIP STYLES ===== */
+    .tech-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.775rem;
+      font-weight: 600;
+      color: rgba(234, 240, 255, 0.78);
+      letter-spacing: 0.01em;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: color 0.2s ease;
+    }
+    .tech-chip:last-child { border-bottom: none; }
+    .tech-chip:hover { color: rgba(234, 240, 255, 1); }
+    .tech-icon {
+      font-size: 0.85rem;
+      color: rgba(77, 124, 254, 0.85);
+      flex-shrink: 0;
+      width: 16px;
+      text-align: center;
+    }
+    [data-theme="light"] .tech-chip {
+      color: #334155;
+      border-color: rgba(15, 23, 42, 0.06);
+    }
+    [data-theme="light"] .tech-chip:hover { color: #0F172A; }
+    [data-theme="light"] #tech-stack {
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 55%),
+        #F8FAFC !important;
+    }
+
+    /* ===== HEADER SCROLLED STATE ===== */
+    header {
+      border-bottom: 1px solid transparent;
+      background: rgba(2, 6, 23, 0.0);
+      backdrop-filter: blur(0px);
+      transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    header.scrolled {
+      background: rgba(2, 6, 23, 0.80);
+      border-color: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(20px) saturate(150%);
+      -webkit-backdrop-filter: blur(20px) saturate(150%);
+    }
+    [data-theme="light"] header.scrolled {
+      background: rgba(248, 250, 252, 0.88);
+      border-color: rgba(15, 23, 42, 0.07);
+    }
   </style>
 </head>
-<body class="font-sans antialiased selection:bg-neonBlue/30 selection:text-white">
-  <!-- Removed fixed blur orbs for scroll performance -->
+<body id="top" class="font-sans antialiased selection:bg-neonBlue/30 selection:text-white">
+
 
   <header class="sticky top-0 z-40">
     <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-      <a href="#top" class="inline-flex items-center gap-3 transition-transform hover:scale-[1.02]">
-        <img src="images/main_logo.png" alt="NextLab logo" class="h-9 w-9 rounded-xl border border-white/20 object-cover" loading="lazy" decoding="async" />
+      <a href="/" id="logoHomeLink" aria-label="NextLab Innovations — back to home" class="inline-flex items-center gap-3 transition-opacity hover:opacity-90">
+        <img src="images/main_logo.png" alt="NextLab logo" class="h-9 w-9 rounded-xl border border-white/20 object-cover" loading="eager" decoding="async" />
         <span class="font-display text-sm font-semibold tracking-[0.08em] text-white/85">NEXTLAB</span>
       </a>
       <nav class="desktop-nav hidden items-center gap-7 text-sm font-semibold text-white/75 md:flex">
@@ -1182,6 +1244,7 @@
       <a href="#top" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Home</a>
       <a href="#products" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Products</a>
       <a href="#roadmap" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Roadmap</a>
+      <a href="#tech-stack" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Tech Stack</a>
       <a href="#capabilities" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Capabilities</a>
       <a href="#stats" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Stats</a>
       <a href="#team" class="mobile-nav-link py-2 border-b border-white/5 [data-theme='light']:border-slate-100 transition-colors hover:text-neonBlue">Team</a>
@@ -1247,19 +1310,96 @@
       </div>
     </section>
 
-    <!-- Trusted Partners & Technologies Logo Row -->
-    <section class="border-b border-white/5 py-10 px-6 lg:px-8 bg-black/10">
+    <!-- Technology Stack Section -->
+    <section id="tech-stack" class="border-b border-white/5 py-20 md:py-28 px-6 lg:px-8" style="background: radial-gradient(ellipse at 50% 0%, rgba(77,124,254,0.06) 0%, transparent 60%), radial-gradient(ellipse at 85% 80%, rgba(154,92,255,0.05) 0%, transparent 55%), var(--bg);">
       <div class="mx-auto w-full max-w-6xl">
-        <p class="text-center text-[10px] font-bold uppercase tracking-[0.25em] text-white/50 mb-6">Technologies We Leverage</p>
-        <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16 opacity-70">
-          <div class="flex items-center gap-2 text-white/80 font-display text-sm font-extrabold tracking-wide"><span class="text-neonBlue text-lg">▲</span> VERCEL</div>
-          <div class="flex items-center gap-2 text-white/80 font-display text-sm font-extrabold tracking-wide"><span class="text-neonPurple text-lg">⚡</span> FASTAPI</div>
-          <div class="flex items-center gap-2 text-white/80 font-display text-sm font-extrabold tracking-wide"><span class="text-neonBlue text-lg">❖</span> FLUTTER</div>
-          <div class="flex items-center gap-2 text-white/80 font-display text-sm font-extrabold tracking-wide"><span class="text-neonPurple text-lg">☁</span> AWS CLOUD</div>
-          <div class="flex items-center gap-2 text-white/80 font-display text-sm font-extrabold tracking-wide"><span class="text-neonBlue text-lg">🗄</span> POSTGRESQL</div>
+        <!-- Section header -->
+        <div class="reveal text-center mb-14">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-neonBlue">Engineering Stack</p>
+          <h2 class="mt-4 font-display text-3xl font-extrabold text-white sm:text-4xl tracking-tight">Technologies We Build With</h2>
+          <p class="mt-4 text-sm text-white/60 max-w-xl mx-auto">A curated set of modern tools we use to ship fast, scale reliably, and innovate continuously.</p>
+        </div>
+
+        <!-- Tech categories grid -->
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+
+          <!-- Frontend -->
+          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonBlue/30 transition-all duration-300 group" style="transition-delay:0ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">🖥</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">Frontend</p>
+            </div>
+            <ul class="space-y-2.5">
+              <li class="tech-chip"><span class="tech-icon" style="color:#54C5F8">❖</span>Flutter</li>
+              <li class="tech-chip"><span class="tech-icon">▲</span>Next.js</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#61DAFB">⚛</span>React</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#3178C6">⬡</span>TypeScript</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#38BDF8">◈</span>Tailwind CSS</li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonPurple/30 transition-all duration-300 group" style="transition-delay:60ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonPurple/15 flex items-center justify-center text-sm">⚙</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonPurple">Backend</p>
+            </div>
+            <ul class="space-y-2.5">
+              <li class="tech-chip"><span class="tech-icon" style="color:#059669">⚡</span>FastAPI</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#68A063">⬡</span>Node.js</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#00ADD8">◉</span>Go</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#F7C948">🐍</span>Python</li>
+            </ul>
+          </div>
+
+          <!-- AI -->
+          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonBlue/30 transition-all duration-300 group" style="transition-delay:120ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">🤖</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">AI / LLM</p>
+            </div>
+            <ul class="space-y-2.5">
+              <li class="tech-chip"><span class="tech-icon" style="color:#10A37F">◆</span>OpenAI</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#4285F4">✦</span>Gemini</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#1C3C4A">⛓</span>LangChain</li>
+              <li class="tech-chip"><span class="tech-icon">⬡</span>MCP</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#9A5CFF">◉</span>RAG & Agents</li>
+            </ul>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonPurple/30 transition-all duration-300 group" style="transition-delay:180ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonPurple/15 flex items-center justify-center text-sm">☁</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonPurple">Cloud & DevOps</p>
+            </div>
+            <ul class="space-y-2.5">
+              <li class="tech-chip"><span class="tech-icon" style="color:#FF9900">☁</span>AWS</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#2496ED">◼</span>Docker</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#326CE5">⚙</span>Kubernetes</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#F38020">⛅</span>Cloudflare</li>
+              <li class="tech-chip"><span class="tech-icon">▷</span>GitHub Actions</li>
+            </ul>
+          </div>
+
+          <!-- Database -->
+          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonBlue/30 transition-all duration-300 group" style="transition-delay:240ms">
+            <div class="flex items-center gap-2.5 mb-4">
+              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">🗄</span>
+              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">Database</p>
+            </div>
+            <ul class="space-y-2.5">
+              <li class="tech-chip"><span class="tech-icon" style="color:#336791">◉</span>PostgreSQL</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#DC382D">◼</span>Redis</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#FFCA28">🔥</span>Firebase</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#3ECF8E">◆</span>Supabase</li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </section>
+
 
     <section id="products" class="px-6 py-20 md:py-32 lg:px-8 border-b border-white/5">
       <div class="mx-auto w-full max-w-6xl">
@@ -2058,7 +2198,8 @@
     (() => {
       const root = document.documentElement;
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const revealEls = Array.from(document.querySelectorAll(".reveal"));
+      // Observe both .reveal and [data-reveal] elements
+      const revealEls = Array.from(document.querySelectorAll(".reveal, [data-reveal]"));
       const markAbove = () => {
         const fold = window.innerHeight * 1.05;
         revealEls.forEach((el) => {
@@ -2077,13 +2218,19 @@
               const io = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                   if (entry.isIntersecting) {
-                    entry.target.classList.add("active", "is-visible");
-                    io.unobserve(entry.target);
+                    const el = entry.target;
+                    // Set will-change only during animation, clean up after
+                    el.style.willChange = 'opacity, transform';
+                    el.classList.add("active", "is-visible");
+                    el.addEventListener('transitionend', () => {
+                      el.style.willChange = 'auto';
+                    }, { once: true });
+                    io.unobserve(el);
                   }
                 });
               }, { 
-                threshold: 0.1,
-                rootMargin: "0px 0px -80px 0px"
+                threshold: 0.08,
+                rootMargin: "0px 0px -60px 0px"
               });
               revealEls.forEach((el) => io.observe(el));
               window.addEventListener("resize", markAbove, { passive: true });
@@ -2098,15 +2245,28 @@
         revealEls.forEach((el) => el.classList.add("active", "is-visible"));
       }
 
-      // Safety fallback: reveal any still-hidden content after a generous delay
-      // Uses 3s so scroll animations have time to fire naturally first
+      // Safety fallback: reduced to 1.5s — animations are fast enough
       setTimeout(() => {
         revealEls.forEach((el) => {
           if (!el.classList.contains('active')) {
             el.classList.add('active', 'is-visible');
           }
         });
-      }, 3000);
+      }, 1500);
+
+      // ========== LOGO HOME NAVIGATION ==========
+      const logoLink = document.getElementById('logoHomeLink');
+      if (logoLink) {
+        logoLink.addEventListener('click', (e) => {
+          // If already on root path or on an index page, smooth scroll to top
+          const onHome = location.pathname === '/' || location.pathname === '/index.html' || location.pathname === '';
+          if (onHome) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          // Otherwise, navigate normally to '/' — the browser handles it
+        });
+      }
 
       // ========== TYPEWRITER ANIMATION ==========
       const initTypewriter = () => {
