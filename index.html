@@ -151,35 +151,36 @@
 
     .stat-card {
       position: relative;
-      background: rgba(15, 23, 42, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.4s ease, background-color 0.4s ease;
     }
 
     /* === REVEAL ANIMATION SYSTEM === */
-    .reveal {
+    .reveal,
+    [data-reveal="fade-up"] {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translateY(30px);
+      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
     }
     [data-reveal="fade-left"] {
       opacity: 0;
-      transform: translateX(-24px);
-      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translateX(-30px);
+      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
     }
     [data-reveal="fade-right"] {
       opacity: 0;
-      transform: translateX(24px);
-      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translateX(30px);
+      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
     }
     [data-reveal="fade-in"] {
       opacity: 0;
       transform: none;
-      transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
       backface-visibility: hidden;
     }
     .reveal.active,
@@ -224,32 +225,32 @@
     /* Hover states for desktop only — premium subtle */
     @media (hover: hover) and (min-width: 1025px) {
       .glass:hover {
-        transform: translateY(-3px);
-        border-color: rgba(77, 124, 254, 0.30);
-        box-shadow: 0 16px 36px -10px rgba(3, 8, 23, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.13);
+        transform: translateY(-2px);
+        border-color: rgba(77, 124, 254, 0.25);
+        box-shadow: 0 12px 32px -8px rgba(3, 8, 23, 0.5);
       }
       [data-theme="light"] .glass:hover {
-        background: rgba(255, 255, 255, 0.92);
-        border-color: rgba(37, 99, 235, 0.35);
-        box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(37, 99, 235, 0.25);
+        box-shadow: 0 10px 24px -8px rgba(15, 23, 42, 0.08);
       }
       .hover-glow:hover {
-        transform: translateY(-3px);
-        border-color: rgba(154, 92, 255, 0.35);
-        box-shadow: 0 12px 28px -8px rgba(154, 92, 255, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.13);
+        transform: translateY(-2px);
+        border-color: rgba(154, 92, 255, 0.3);
+        box-shadow: 0 12px 24px -8px rgba(154, 92, 255, 0.15);
       }
       .stat-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(77, 124, 254, 0.30);
-        box-shadow: 0 12px 28px -8px rgba(77, 124, 254, 0.18);
+        transform: translateY(-2px);
+        border-color: rgba(77, 124, 254, 0.25);
+        box-shadow: 0 10px 24px -8px rgba(77, 124, 254, 0.15);
       }
       [data-theme="light"] .stat-card:hover {
-        background: rgba(255, 255, 255, 0.92);
-        border-color: rgba(37, 99, 235, 0.40);
-        box-shadow: 0 12px 28px -8px rgba(37, 99, 235, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(37, 99, 235, 0.30);
+        box-shadow: 0 10px 24px -8px rgba(37, 99, 235, 0.08);
       }
       .rounded-btn:hover, a.rounded-\[18px\]:hover, a.rounded-btn:hover {
-        transform: translateY(-2px);
+        transform: translateY(-1px);
       }
     }
 
@@ -784,23 +785,27 @@
       }
 
       /* Mobile: lighter animation distance for performance */
-      .reveal {
-        transform: translateY(10px);
-        transition: opacity 350ms cubic-bezier(0.22, 1, 0.36, 1), transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+      .reveal,
+      [data-reveal="fade-up"] {
+        transform: translateY(15px);
+        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       [data-reveal="fade-left"] {
-        transform: translateX(-10px);
-        transition: opacity 350ms cubic-bezier(0.22, 1, 0.36, 1), transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+        transform: translateX(-15px);
+        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
       }
       [data-reveal="fade-right"] {
-        transform: translateX(10px);
-        transition: opacity 350ms cubic-bezier(0.22, 1, 0.36, 1), transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+        transform: translateX(15px);
+        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      [data-reveal="fade-in"] {
+        transition: opacity 550ms cubic-bezier(0.22, 1, 0.36, 1);
       }
     }
 
     @media (min-width: 641px) and (max-width: 1024px) {
-      .reveal, [data-reveal="fade-left"], [data-reveal="fade-right"] {
-        transition: opacity 480ms cubic-bezier(0.22, 1, 0.36, 1), transform 480ms cubic-bezier(0.22, 1, 0.36, 1);
+      .reveal, [data-reveal] {
+        transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
       }
     }
 
@@ -896,8 +901,8 @@
 
     @media (max-width: 768px) {
       .glass {
-        backdrop-filter: blur(12px) saturate(130%);
-        -webkit-backdrop-filter: blur(12px) saturate(130%);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
       }
       .hover-glow:hover {
         transform: none;
@@ -983,11 +988,11 @@
 
     .phone-notch {
       position: absolute;
-      top: 10px;
+      top: 8px;
       left: 50%;
       transform: translateX(-50%);
-      width: 90px;
-      height: 25px;
+      width: 76px;
+      height: 22px;
       background: #000;
       border-radius: 12px;
       z-index: 100;
@@ -1004,17 +1009,28 @@
     }
 
     .phone-slider {
-      display: flex;
-      width: 400%;
+      position: relative;
+      width: 100%;
       height: 100%;
-      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-      will-change: transform;
     }
 
     .phone-slide {
-      width: 25%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
-      position: relative;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+      pointer-events: none;
+    }
+
+    .phone-slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
     }
 
     .phone-slide img {
@@ -1321,17 +1337,17 @@
         </div>
 
         <!-- Tech categories grid -->
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
 
           <!-- Frontend -->
-          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonBlue/30 transition-all duration-300 group" style="transition-delay:0ms">
-            <div class="flex items-center gap-2.5 mb-4">
-              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">🖥</span>
-              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">Frontend</p>
+          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonBlue/10 group bg-white/[0.02] flex flex-col" style="transition-delay:0ms">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-lg bg-neonBlue/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">🖥</span>
+              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">Frontend</p>
             </div>
-            <ul class="space-y-2.5">
+            <ul class="space-y-3 mt-auto">
               <li class="tech-chip"><span class="tech-icon" style="color:#54C5F8">❖</span>Flutter</li>
-              <li class="tech-chip"><span class="tech-icon">▲</span>Next.js</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">▲</span>Next.js</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#61DAFB">⚛</span>React</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#3178C6">⬡</span>TypeScript</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#38BDF8">◈</span>Tailwind CSS</li>
@@ -1339,12 +1355,12 @@
           </div>
 
           <!-- Backend -->
-          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonPurple/30 transition-all duration-300 group" style="transition-delay:60ms">
-            <div class="flex items-center gap-2.5 mb-4">
-              <span class="w-7 h-7 rounded-lg bg-neonPurple/15 flex items-center justify-center text-sm">⚙</span>
-              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonPurple">Backend</p>
+          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonPurple/10 group bg-white/[0.02] flex flex-col" style="transition-delay:60ms">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-lg bg-neonPurple/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">⚙</span>
+              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">Backend</p>
             </div>
-            <ul class="space-y-2.5">
+            <ul class="space-y-3 mt-auto">
               <li class="tech-chip"><span class="tech-icon" style="color:#059669">⚡</span>FastAPI</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#68A063">⬡</span>Node.js</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#00ADD8">◉</span>Go</li>
@@ -1353,42 +1369,42 @@
           </div>
 
           <!-- AI -->
-          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonBlue/30 transition-all duration-300 group" style="transition-delay:120ms">
-            <div class="flex items-center gap-2.5 mb-4">
-              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">🤖</span>
-              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">AI / LLM</p>
+          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonBlue/10 group bg-white/[0.02] flex flex-col" style="transition-delay:120ms">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-lg bg-neonBlue/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">🤖</span>
+              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">AI / LLM</p>
             </div>
-            <ul class="space-y-2.5">
+            <ul class="space-y-3 mt-auto">
               <li class="tech-chip"><span class="tech-icon" style="color:#10A37F">◆</span>OpenAI</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#4285F4">✦</span>Gemini</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#1C3C4A">⛓</span>LangChain</li>
-              <li class="tech-chip"><span class="tech-icon">⬡</span>MCP</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">⬡</span>MCP</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#9A5CFF">◉</span>RAG & Agents</li>
             </ul>
           </div>
 
           <!-- Cloud & DevOps -->
-          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonPurple/30 transition-all duration-300 group" style="transition-delay:180ms">
-            <div class="flex items-center gap-2.5 mb-4">
-              <span class="w-7 h-7 rounded-lg bg-neonPurple/15 flex items-center justify-center text-sm">☁</span>
-              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonPurple">Cloud & DevOps</p>
+          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonPurple/10 group bg-white/[0.02] flex flex-col" style="transition-delay:180ms">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-lg bg-neonPurple/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">☁</span>
+              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">Cloud</p>
             </div>
-            <ul class="space-y-2.5">
+            <ul class="space-y-3 mt-auto">
               <li class="tech-chip"><span class="tech-icon" style="color:#FF9900">☁</span>AWS</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#2496ED">◼</span>Docker</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#326CE5">⚙</span>Kubernetes</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#F38020">⛅</span>Cloudflare</li>
-              <li class="tech-chip"><span class="tech-icon">▷</span>GitHub Actions</li>
+              <li class="tech-chip"><span class="tech-icon" style="color:#FFF">▷</span>GitHub Actions</li>
             </ul>
           </div>
 
           <!-- Database -->
-          <div class="reveal glass rounded-2xl p-5 border border-white/10 hover:border-neonBlue/30 transition-all duration-300 group" style="transition-delay:240ms">
-            <div class="flex items-center gap-2.5 mb-4">
-              <span class="w-7 h-7 rounded-lg bg-neonBlue/15 flex items-center justify-center text-sm">🗄</span>
-              <p class="text-[10px] font-bold uppercase tracking-[0.18em] text-neonBlue">Database</p>
+          <div data-reveal="fade-up" class="glass rounded-[20px] p-6 border border-white/5 hover:border-white/15 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neonBlue/10 group bg-white/[0.02] flex flex-col" style="transition-delay:240ms">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-8 rounded-lg bg-neonBlue/10 flex items-center justify-center text-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">🗄</span>
+              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-white/80">Database</p>
             </div>
-            <ul class="space-y-2.5">
+            <ul class="space-y-3 mt-auto">
               <li class="tech-chip"><span class="tech-icon" style="color:#336791">◉</span>PostgreSQL</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#DC382D">◼</span>Redis</li>
               <li class="tech-chip"><span class="tech-icon" style="color:#FFCA28">🔥</span>Firebase</li>
@@ -2229,8 +2245,8 @@
                   }
                 });
               }, { 
-                threshold: 0.08,
-                rootMargin: "0px 0px -60px 0px"
+                threshold: 0.15,
+                rootMargin: "0px 0px -40px 0px"
               });
               revealEls.forEach((el) => io.observe(el));
               window.addEventListener("resize", markAbove, { passive: true });
@@ -2258,13 +2274,18 @@
       const logoLink = document.getElementById('logoHomeLink');
       if (logoLink) {
         logoLink.addEventListener('click', (e) => {
-          // If already on root path or on an index page, smooth scroll to top
-          const onHome = location.pathname === '/' || location.pathname === '/index.html' || location.pathname === '';
-          if (onHome) {
+          // Robustly check if we are on the homepage by looking for the hero section
+          const heroSection = document.querySelector('section.relative.px-6'); // The first section
+          const isHomePage = !!document.getElementById('products'); // Or just checking for #products
+          
+          if (isHomePage) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            // Navigate home relative to current path
+            e.preventDefault();
+            window.location.href = 'index.html';
           }
-          // Otherwise, navigate normally to '/' — the browser handles it
         });
       }
 
@@ -2283,12 +2304,24 @@
         ];
         let si = 0, ci = 0;
         const go = () => {
-          const txt = steps[si % steps.length];
+          if (si >= steps.length) {
+             // Stop completely after all words
+             cur.style.display = 'none';
+             return;
+          }
+          const txt = steps[si];
           const type = () => {
             if (ci < txt.length) {
               el.textContent += txt[ci++];
               setTimeout(type, speed);
             } else {
+              // Once word is typed, if it's the last word, stop. Otherwise erase and do next.
+              if (si === steps.length - 1) {
+                setTimeout(() => {
+                  cur.style.display = 'none';
+                }, 1200);
+                return;
+              }
               setTimeout(() => {
                 setTimeout(() => {
                   el.textContent = "";
@@ -2392,41 +2425,30 @@
         const nextBtn = document.getElementById("labsSliderNext");
         const prevBtn = document.getElementById("labsSliderPrev");
         const dots = document.querySelectorAll("#labsSliderDots .phone-dot");
-        if (!slider || dots.length === 0) return;
+        const slides = slider ? slider.querySelectorAll(".phone-slide") : [];
+        if (!slider || dots.length === 0 || slides.length === 0) return;
 
         let currentIndex = 0;
         const totalSlides = dots.length;
-        let isTransitioning = false;
 
-        // Pre-activate transform layer
-        slider.style.willChange = "transform";
+        // Initialize first slide
+        slides.forEach((slide, idx) => {
+          if(idx === currentIndex) slide.classList.add('active');
+          else slide.classList.remove('active');
+        });
 
         const updateSlider = (index) => {
-          if (isTransitioning) return;
           const targetIndex = (index + totalSlides) % totalSlides;
           if (targetIndex === currentIndex) return;
 
-          isTransitioning = true;
+          slides[currentIndex].classList.remove('active');
           currentIndex = targetIndex;
+          slides[currentIndex].classList.add('active');
           
-          slider.style.transform = `translate3d(-${currentIndex * 25}%, 0, 0)`;
           dots.forEach((dot, idx) => {
             dot.classList.toggle("active", idx === currentIndex);
           });
         };
-
-        // Transition locks
-        slider.addEventListener("transitionend", (e) => {
-          if (e.target === slider && e.propertyName === "transform") {
-            isTransitioning = false;
-          }
-        });
-
-        slider.addEventListener("transitioncancel", (e) => {
-          if (e.target === slider) {
-            isTransitioning = false;
-          }
-        });
 
         if (nextBtn) {
           nextBtn.addEventListener("click", (e) => {
