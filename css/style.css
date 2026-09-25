@@ -217,15 +217,10 @@ p {
   padding-bottom: clamp(2.75rem, 4.5vw, 4.25rem);
   position: relative;
   background-color: var(--bg-page);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.section:last-of-type {
-  border-bottom: none;
 }
 
 .section-border {
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: none;
 }
 
 .section-alt {
@@ -332,11 +327,9 @@ p {
 }
 
 .btn-sm {
-  padding: 0.45rem 0.95rem;
-  min-height: 36px;
+  padding: 0.5rem 0.875rem;
   font-size: 0.8125rem;
-  font-weight: 600;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
 }
 
 .btn-lg {
@@ -438,7 +431,7 @@ p {
   font-size: clamp(0.8125rem, 0.9vw, 0.875rem);
   font-weight: 500;
   color: var(--text-secondary);
-  padding: 0.35rem 0.25rem;
+  padding: 0.25rem 0;
   position: relative;
   white-space: nowrap;
   transition: color var(--transition-fast);
@@ -446,6 +439,21 @@ p {
 
 .nav-link:hover {
   color: var(--text-primary);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-primary);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .header-actions {
@@ -594,16 +602,15 @@ body.menu-open {
    6. Hero Section & Brand Engineering Visual (Solid Neutral Background)
    -------------------------------------------------------------------------- */
 .hero-section {
-  padding-top: clamp(2.5rem, 4vw, 4.25rem);
-  padding-bottom: clamp(2.5rem, 3.8vw, 3.75rem);
+  padding-top: clamp(3rem, 5vw, 5.5rem);
+  padding-bottom: clamp(2.75rem, 4.5vw, 4.25rem);
   position: relative;
   background-color: var(--bg-page);
-  border-bottom: 1px solid var(--border-subtle);
 }
 
 .hero-grid {
   display: grid;
-  gap: clamp(1.75rem, 3.5vw, 3rem);
+  gap: clamp(2rem, 4vw, 3.5rem);
   align-items: center;
 }
 
@@ -633,7 +640,7 @@ body.menu-open {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text-secondary);
-  margin-bottom: clamp(1rem, 1.8vw, 1.25rem);
+  margin-bottom: 1.5rem;
 }
 
 .hero-badge-dot {
@@ -644,16 +651,16 @@ body.menu-open {
 }
 
 .hero-title {
-  margin-bottom: clamp(0.875rem, 1.4vw, 1.125rem);
+  margin-bottom: 1.25rem;
   font-weight: 800;
   color: var(--text-primary);
 }
 
 .hero-subtitle {
-  font-size: clamp(1.0625rem, 1.35vw, 1.1875rem);
+  font-size: clamp(1.0625rem, 1.4vw, 1.2rem);
   color: var(--text-secondary);
   line-height: 1.65;
-  margin-bottom: clamp(1.375rem, 2vw, 1.75rem);
+  margin-bottom: 2rem;
   max-width: 540px;
 }
 
@@ -662,7 +669,7 @@ body.menu-open {
   flex-wrap: wrap;
   gap: 0.875rem;
   align-items: center;
-  margin-bottom: clamp(1.5rem, 2.2vw, 1.875rem);
+  margin-bottom: 2.5rem;
 }
 
 @media (max-width: 580px) {
@@ -683,8 +690,8 @@ body.menu-open {
   flex-wrap: wrap;
   align-items: center;
   gap: clamp(0.75rem, 2vw, 1.5rem);
-  padding-top: clamp(1.125rem, 1.6vw, 1.375rem);
-  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-medium);
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-muted);
@@ -707,7 +714,7 @@ body.menu-open {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
-  padding: clamp(1.25rem, 2.2vw, 1.75rem);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -717,7 +724,7 @@ body.menu-open {
 
 @media (max-width: 480px) {
   .brand-architecture-visual {
-    padding: 1rem;
+    padding: 1.125rem;
   }
 }
 
@@ -727,14 +734,14 @@ body.menu-open {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5rem;
-  border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 0.875rem;
+  border-bottom: 1px solid var(--border-medium);
+  padding-bottom: 1rem;
 }
 
 .brand-visual-heading {
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
@@ -747,42 +754,41 @@ body.menu-open {
 
 /* Central Engineering Node Graphic */
 .brand-schematic-center {
-  margin: 1.125rem 0;
+  margin: clamp(1.25rem, 3vw, 2rem) 0;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .schematic-core-node {
   display: flex;
   align-items: center;
-  gap: 0.875rem;
-  padding: 0.875rem 1rem;
-  background-color: rgba(15, 20, 27, 0.55);
-  border: 1px solid var(--border-subtle);
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  transition: border-color var(--transition-fast);
 }
 
 @media (max-width: 480px) {
   .schematic-core-node {
-    padding: 0.75rem 0.875rem;
+    padding: 0.8125rem 0.875rem;
     gap: 0.75rem;
   }
 }
 
 .schematic-core-node:hover {
-  border-color: var(--border-medium);
-  background-color: rgba(15, 20, 27, 0.75);
+  border-color: var(--border-strong);
 }
 
 .schematic-node-icon {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: var(--radius-sm);
   background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-medium);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -805,7 +811,6 @@ body.menu-open {
 .schematic-node-sub {
   font-size: 0.75rem;
   color: var(--text-muted);
-  line-height: 1.4;
 }
 
 .brand-visual-bottom {
@@ -814,27 +819,10 @@ body.menu-open {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5rem;
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 0.875rem;
+  border-top: 1px solid var(--border-medium);
+  padding-top: 1rem;
   font-size: 0.75rem;
   color: var(--text-muted);
-}
-
-/* Hero Right-Side Visual Load Animation */
-@keyframes heroVisualSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hero-visual-entrance {
-  animation: heroVisualSlideIn 750ms cubic-bezier(0.16, 1, 0.3, 1) 180ms both;
-  will-change: opacity, transform;
 }
 
 /* --------------------------------------------------------------------------
@@ -1770,7 +1758,7 @@ textarea.form-control {
    -------------------------------------------------------------------------- */
 .site-footer {
   background-color: var(--bg-footer);
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border-medium);
   color: var(--text-secondary);
   padding-top: clamp(3.5rem, 5vw, 4.5rem);
   padding-bottom: 3rem;
@@ -1911,12 +1899,6 @@ textarea.form-control {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-  }
-
-  .hero-visual-entrance {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
   }
 }
 
